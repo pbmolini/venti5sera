@@ -8,7 +8,8 @@ class DesiresController < ApplicationController
 			flash[:success] = "Desire created!"
 			redirect_to root_url
 		else
-			redirect_to root_url
+			@feed_items = current_user.feed.paginate(page: params[:page])
+			render 'static_pages/home'
 		end
 	end
 
