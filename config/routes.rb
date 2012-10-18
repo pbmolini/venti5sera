@@ -1,4 +1,5 @@
 Venti5sera::Application.routes.draw do
+
   root to: 'static_pages#home'
 
   match '/about', to: 'static_pages#about'
@@ -6,6 +7,11 @@ Venti5sera::Application.routes.draw do
   match '/help',  to: 'static_pages#help'
 
   resources :users
+  resources :user_sessions, only: [ :new, :create, :destroy ]
+
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'user_sessions#new'
+  match '/signout', to:'user_sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

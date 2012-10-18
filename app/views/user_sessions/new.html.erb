@@ -1,0 +1,19 @@
+<% provide(:title, 'Login') %>
+<h1>Login</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@user_session) do |f| %>
+		<%= render 'shared/error_messages', object: f.object %>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<p><%= f.submit "Login", class: "btn btn-large btn-primary" %></p>
+		<% end %>		
+
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+	</div>
+</div>
