@@ -1,0 +1,7 @@
+<li>
+  <span class="content"><%= desire.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(desire.created_at) %> ago.
+  </span>
+  <%= render 'shared/delete_desire_link', desire: desire %>
+</li>

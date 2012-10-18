@@ -1,0 +1,8 @@
+<%= form_for(@desire) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <!-- object: f.object creates a variable called object in the error_messages partial -->
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new desire..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
