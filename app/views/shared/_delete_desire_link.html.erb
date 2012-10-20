@@ -1,5 +1,5 @@
 <% if current_user?(desire.user) %>
-	<%= link_to "delete", desire, method: :delete,
+	<%= link_to (raw '<i class="icon-trash"></i> Delete'), desire, method: :delete,
 																	 data: { confirm: "You sure?" },
 																	 title: desire.content %>
 <% end %>
