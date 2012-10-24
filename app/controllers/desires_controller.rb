@@ -19,6 +19,21 @@ class DesiresController < ApplicationController
 		redirect_to root_url
 	end
 
+	def edit
+		@desire = Desire.find(params[:id])
+	end
+
+  def update
+    @desire = Desire.find(params[:id])
+    if @desire.update_attributes(params[:desire])
+      # Handle a successful update.
+      flash[:success] = "Desire updated"
+      redirect_to current_user
+    else
+      render 'edit'
+    end
+  end
+
 	private
 
 	def correct_user

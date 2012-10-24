@@ -1,7 +1,12 @@
 <li>
-  <span class="content"><%= desire.content %></span>
+  <span class="content"><%= wrap(link_generator(desire.content)) %></span>
   <span class="timestamp">
+  	<% if (desire.updated_at > desire.created_at) %>
+  	Updated <%= time_ago_in_words(desire.updated_at) %> ago.
+  	<% else %>
     Posted <%= time_ago_in_words(desire.created_at) %> ago.
+    <% end %>
   </span>
   <%= render 'shared/delete_desire_link', desire: desire %>
+  <%= link_to 'Edit', edit_desire_path(desire) %>
 </li>

@@ -12,7 +12,7 @@ Venti5sera::Application.routes.draw do
 
   resources :users
   resources :user_sessions, only: [ :new, :create, :destroy ]
-  resources :desires, only: [ :create, :destroy ]
+  resources :desires, only: [ :create, :destroy, :edit, :update ]
   resources :relationships, only: [ :create, :destroy ]
 
   match '/signup', to: 'users#new'
