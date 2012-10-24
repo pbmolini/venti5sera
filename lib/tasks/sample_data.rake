@@ -30,7 +30,7 @@ def make_desires
 
   # create 50 desires for the firs 6 users
   users = User.all(limit: 6)
-  50.times do
+  25.times do
     content = Faker::Lorem.sentence(5)
     users.each { |user| user.desires.create!(content: content)}
   end

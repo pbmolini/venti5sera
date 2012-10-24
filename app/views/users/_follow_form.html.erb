@@ -1,0 +1,11 @@
+<% unless current_user?(@user) %>
+  <div id="follow_form">
+  <% if current_user.following?(@user) %>
+    <%= render 'unfollow' %>
+  <% elsif current_user.followed_user %>
+  <a style="margin-bottom: 10px; padding: 10px" href="#" class="btn btn-large disabled">Cannot Follow</a>
+  <% else %>
+    <%= render 'follow' %>
+  <% end %>
+  </div>
+<% end %>
