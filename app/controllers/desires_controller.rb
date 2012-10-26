@@ -5,6 +5,7 @@ class DesiresController < ApplicationController
 	def create
 		@desire = current_user.desires.build(params[:desire])
 		if @desire.save
+			UserMailer.new_desire(current_user.follower).deliver
 			flash[:success] = "Desire created!"
 			redirect_to root_url
 		else
@@ -16,6 +17,7 @@ class DesiresController < ApplicationController
 
 	def destroy
 		@desire.destroy
+			UserMailer.removed_desire(current_user.follower).deliver
 		redirect_to root_url
 	end
 
@@ -26,6 +28,7 @@ class DesiresController < ApplicationController
   def update
     @desire = Desire.find(params[:id])
     if @desire.update_attributes(params[:desire])
+			UserMailer.updated_desire(current_user.follower).deliver
       # Handle a successful update.
       flash[:success] = "Desire updated"
       redirect_to current_user

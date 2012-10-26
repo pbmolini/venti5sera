@@ -21,3 +21,6 @@ doc/
 .project
 .DS_Store
 .idea
+
+# Ignore private files
+config/initializers/setup_mail.rb
