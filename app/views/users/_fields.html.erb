@@ -3,8 +3,10 @@
 <%= f.label :name %>
 <%= f.text_field :name %>
 
+<% if !current_user %>
 <%= f.label :email %>
-<%= f.text_field :email %>
+<%= f.email_field :email %>
+<% end %>
 
 <%= f.label :password %>
 <%= f.password_field :password %>
