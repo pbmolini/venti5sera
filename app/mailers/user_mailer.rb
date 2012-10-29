@@ -6,6 +6,12 @@ class UserMailer < ActionMailer::Base
   	mail(to: "#{user.name} <#{user.email}>", subject: "Registered")
   end
 
+  def new_user_created(user)
+    @user = user    
+    admin = User.where("admin = ?", true).first
+    mail(to: "#{admin.name} <#{admin.email}>", subject: "New User registration")
+  end
+
   def start_following(user)
   	@user = user
   	mail(to: "#{user.name} <#{user.email}>", subject: "Someone is following you!")

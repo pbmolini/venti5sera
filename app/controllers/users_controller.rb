@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(params[:user])
   	if @user.save
       UserMailer.registration_confirmation(@user).deliver
+      UserMailer.new_user_created(@user).deliver
   		flash[:success] = "Registration success"
   		redirect_to root_path
   	else

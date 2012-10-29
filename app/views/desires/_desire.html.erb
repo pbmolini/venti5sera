@@ -1,5 +1,5 @@
 <li>
-  <span class="content"><%= wrap(link_generator(desire.content)) %></span>
+  <span class="content"><%= raw link_generator(desire.content) %></span>
   <span class="timestamp">
   	<% if (desire.updated_at > desire.created_at) %>
   	Updated <%= time_ago_in_words(desire.updated_at) %> ago.
