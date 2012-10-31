@@ -8,6 +8,10 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'authlogic'
 
+# Paperclip
+gem "paperclip", "~> 3.0"
+gem "paperclip-dropbox"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

@@ -3,7 +3,9 @@
 	<aside class="span4">
 		<section>
 			<h1>
-				<%= gravatar_for @user, size: 150 %>
+				<%#= gravatar_for @user, size: 150 %>				
+				<%#= image_tag @user.avatar.url :medium %>
+				<%= avatar_for @user, :medium %>
 				<%=  @user.name %>
 			</h1>
 		</section>

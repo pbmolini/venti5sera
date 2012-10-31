@@ -1,5 +1,6 @@
 <a href="<%= user_path(current_user) %>">
-  <%= gravatar_for current_user, size: 150 %>
+  <%#= gravatar_for current_user, size: 150 %>
+  <%= avatar_for current_user, :medium %>
 </a>
 <h1>
   <%= current_user.name %>

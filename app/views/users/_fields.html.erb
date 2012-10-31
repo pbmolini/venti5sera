@@ -13,3 +13,9 @@
 
 <%= f.label :password_confirmation, "Confirmation" %>
 <%= f.password_field :password_confirmation %>
+
+<% if current_user %>
+<%= f.label :avatar %>
+<%= f.file_field :avatar %>
+<br>
+<% end %>

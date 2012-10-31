@@ -24,3 +24,7 @@ doc/
 
 # Ignore private files
 config/initializers/setup_mail.rb
+config/initializers/dropbox_setup.rb
+
+# Ignore files produced by PaperClip
+public/system

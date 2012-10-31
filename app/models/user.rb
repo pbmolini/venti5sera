@@ -1,6 +1,14 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :avatar
 	acts_as_authentic
+  has_attached_file :avatar, 
+                    storage: :dropbox,
+                    dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
+                    styles: { medium: "150x150>", thumb: "52x52>",small: "40x40>" },
+                    dropbox_options: {
+                        path: proc { |style| "venti5sera/#{style}/#{id}_#{avatar.original_filename}" },
+                        unique_filename: true
+                    }
 	has_many :desires,  dependent: :destroy
 	has_one :relationship, foreign_key: "follower_id", dependent: :destroy
   has_one :followed_user, through: :relationship, source: :followed
