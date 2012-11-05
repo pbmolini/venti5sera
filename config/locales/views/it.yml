@@ -1,0 +1,5 @@
+it:
+  static_pages:
+    welcome:
+      welcome_text: "Benvenuto su Venti5Sera!"
+      welcome_subtext: "Questa è la pagina iniziale dell'applicazione Venti5sera."
