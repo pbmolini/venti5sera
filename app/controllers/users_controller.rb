@@ -35,11 +35,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      # puts params
-      # if !params[:user][:avatar]
-      #   @user.avatar = nil
-      #   @user.save
-      # end
       # Handle a successful update.
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -55,6 +50,17 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @desires = @user.desires.paginate(page: params[:page], per_page: 20)
+  end
+
+  def remove_avatar
+    @user = User.find(params[:id])
+    @user.avatar = nil
+    if @user.save
+      flash[:success] = "Avatar removed, you are using gravatar!"
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
   private

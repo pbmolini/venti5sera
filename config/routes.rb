@@ -19,6 +19,8 @@ Venti5sera::Application.routes.draw do
   match '/signin', to: 'user_sessions#new'
   match '/signout', to:'user_sessions#destroy'
 
+  match '/user/:id/remove_avatar', to: "users#remove_avatar"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

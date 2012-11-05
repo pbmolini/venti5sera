@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
                         path: proc { |style| "venti5sera/#{style}/#{id}_#{avatar.original_filename}" },
                         unique_filename: true
                     }
+
+  validates_attachment_size :avatar, less_than: 500.kilobyte
 	has_many :desires,  dependent: :destroy
 	has_one :relationship, foreign_key: "follower_id", dependent: :destroy
   has_one :followed_user, through: :relationship, source: :followed

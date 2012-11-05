@@ -7,6 +7,6 @@
     Posted <%= time_ago_in_words(desire.created_at) %> ago.
     <% end %>
   </span>
-  <%= render 'shared/delete_desire_link', desire: desire %>
-  <%= link_to 'Edit', edit_desire_path(desire) %>
+  <%= render 'shared/delete_desire_link', desire: desire %> | 
+  <%= render 'shared/edit_desire_link', desire: desire %>
 </li>

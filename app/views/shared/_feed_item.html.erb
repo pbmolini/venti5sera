@@ -12,5 +12,6 @@
     Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
     <% end %>
   </span>
-   <%= render 'shared/delete_desire_link', desire: feed_item %>
+   <%= render 'shared/delete_desire_link', desire: feed_item %> | 
+   <%= render 'shared/edit_desire_link', desire: feed_item %>
 </li>
