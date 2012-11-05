@@ -1,0 +1,19 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+it:
+  hello: "Ciao mondo"
+  are_you_sure: "Sei sicuro?"
+  sign_up_now: "Registrati adesso!"
+  new_user: "Nuovo utente?"
+  sign_in: "Entra"
+  sign_out: "Esci"
+  delete: "elimina"
+  edit: "cambia"
+  button:
+    signup: "Registrati!"
+    login: "Accedi"
+    post: "Crea"
+    edit: "Modifica"
+    save_changes: "Salve le modifiche"
+    create_account: "Crea il mio account"

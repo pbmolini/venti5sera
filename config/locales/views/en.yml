@@ -3,3 +3,32 @@ en:
     welcome:
       welcome_text: "Welcome to Venti5sera!"
       welcome_subtext: "This is the home page for Venti5sera application."
+    about:
+      about_text: ""
+    help:
+      help_text: ""
+  users:
+    fields:
+      name: "Name"
+      password: "Password"
+      confirmation: "Password Confirmation"
+    new:
+      signup: "Sign up"
+    edit:
+      title: "Edit user"
+      head: "Update your profile"
+      edit_gravatar: "edit on gravatar.com"
+  layouts:
+    header:
+      home: "Home"
+      help: "Help"
+      users: "Users"
+      my_desires: "My Desires"
+      profile: "Profile"
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+  shared:
+    feed_item:
+      updated: "Updated"
+      created: "Created"
+      ago: "ago"

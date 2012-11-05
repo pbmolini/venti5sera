@@ -1,0 +1,20 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  are_you_sure: "Are you sure?" 
+  sign_up_now: "Sign up now!"
+  new_user: "New user?"
+  sign_in: "Sign in"
+  sign_out: "Sign out"
+  delete: "delete"
+  edit: "edit"
+  button: 
+    signup: "Signup!"
+    login: "Login"
+    post: "Post"
+    edit: "Edit"
+    save_changes: "Save changes"
+    create_account: "Create my account"
+
