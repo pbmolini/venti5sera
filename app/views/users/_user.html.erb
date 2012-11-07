@@ -6,4 +6,7 @@
     | <%= link_to (raw t('.delete_html')), user, method: :delete,
                                   data: { confirm: t(:are_you_sure) } %>
   <% end %>
+  <span class="subtext">
+  	<%= t("shared.user_info.desire", count: user.desires.count) %>
+  </span>
 </li>

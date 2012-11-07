@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, 
                     storage: :dropbox,
                     dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
-                    styles: { medium: "150x150>", thumb: "52x52>",small: "40x40>" },
+                    styles: { medium: "150x150>", thumb: "52x52>", small: "40x40>" },
                     dropbox_options: {
                         path: proc { |style| "venti5sera/#{style}/#{id}_#{avatar.original_filename}" },
                         unique_filename: true
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   end
 
   def follow!(other_user)
-    create_relationship!(followed_id: other_user.id)
+    create_relationship!(followed_id: other_user.id) unless other_user.follower
   end
 
   def unfollow!(other_user)

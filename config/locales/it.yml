@@ -18,6 +18,9 @@ it:
     edit: "Modifica"
     save_changes: "Salve le modifiche"
     create_account: "Crea il mio account"
+    follow: "Segui"
+    unfollow: "Non seguire più"
+    cannot_follow: "Non puoi seguire"
   flash:
     desire_created: "Desiderio creato!"
     desire_updated: "Desiderio aggiornato!"

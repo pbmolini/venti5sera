@@ -18,6 +18,9 @@ en:
     edit: "Edit"
     save_changes: "Save changes"
     create_account: "Create my account"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    cannot_follow: "Cannot follow"
   flash:
     desire_created: "Desire created!"
     desire_updated: "Desire updated"

@@ -1,5 +1,3 @@
-<%= form_for(current_user.build_relationship(followed_id: @user.id), 
-						 remote: true) do |f| %>
-  <div><%= f.hidden_field :followed_id %></div>
-  <%= f.submit "Cannot Follow", class: "btn btn-large disabled" %>
+<%= form_tag do %>
+  <%= submit_tag t("button.cannot_follow"), { disabled: true, class: "btn btn-large disabled" } %>
 <% end %>
