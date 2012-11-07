@@ -4,9 +4,9 @@
 			<%= link_to "venti5sera", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to t(".home"),    root_path %></li>
-					<li><%= link_to t(".help"),    help_path %></li>
-          <li><%= link_to t(".users"), users_path %></li>
+					<li><%= link_to raw("<i class='icon-home'></i> #{t('.home')}"), root_path %></li>
+          <li><%= link_to raw("<i class='icon-list'></i> #{t('.users')}"), users_path %></li>
+          <li><%= link_to raw("<i class='icon-question-sign'></i> #{t('.help')}"), help_path %></li>
           <% if current_user %>
           <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -14,11 +14,11 @@
               <%#= avatar_for(current_user, :small) %> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to t(".my_desires"), current_user %></li>
-              <li><%= link_to t(".profile"), edit_user_path(current_user) %></li>
+              <li><%= link_to raw("<i class='icon-gift'></i> #{t('.my_desires')}"), current_user %></li>
+              <li><%= link_to raw("<i class='icon-user'></i> #{t('.profile')}"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to t(".sign_out"), signout_path, method: "delete" %>
+                <%= link_to raw("<i class='icon-off'></i> #{t('.sign_out')}"), signout_path, method: "delete" %>
               </li>
             </ul>
           </li>
