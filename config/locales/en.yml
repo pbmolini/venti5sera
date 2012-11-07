@@ -4,8 +4,6 @@
 en:
   hello: "Hello world"
   are_you_sure: "Are you sure?" 
-  sign_up_now: "Sign up now!"
-  new_user: "New user?"
   sign_in: "Sign in"
   sign_out: "Sign out"
   delete: "delete"

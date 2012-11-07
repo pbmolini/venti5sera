@@ -2,6 +2,8 @@ it:
   user_mailer:
     check_it_out: "Dai un'occhiata sul sito!"
     check_it_out_html: "<p>Dai un'occhiata su %{link}!</p>"
+    thanks: "Grazie"
+    signature: "~ Venti5sera team ~"  
     subject:
       registration_confirmation: "Conferma Registrazione"
       new_user_created: "Registrazione nuovo utente"

@@ -2,6 +2,8 @@ en:
   user_mailer:
     check_it_out: "Check it out now on the website!"
     check_it_out_html: "<p>Check it out now on %{link}!</p>"
+    thanks: "Thank you"
+    signature: "~ Venti5sera team ~"
     subject:
       registration_confirmation: "Registration confirmation"
       new_user_created: "New User registration"

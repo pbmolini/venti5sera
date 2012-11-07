@@ -4,8 +4,6 @@
 it:
   hello: "Ciao mondo"
   are_you_sure: "Sei sicuro?"
-  sign_up_now: "Registrati adesso!"
-  new_user: "Nuovo utente?"
   sign_in: "Entra"
   sign_out: "Esci"
   delete: "elimina"

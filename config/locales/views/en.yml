@@ -4,8 +4,12 @@ en:
       welcome_text: "Welcome to Venti5sera!"
       welcome_subtext: "This is the home page for Venti5sera application."
     about:
+      title: "About"
+      head: "About" 
       about_text: ""
     help:
+      title: "Help"
+      head: "Help page" 
       help_text: ""
     home:
       latest_desires: "Latest Desires"
@@ -20,6 +24,7 @@ en:
       title: "Edit user"
       head: "Update your profile"
       edit_gravatar: "edit on gravatar.com"
+      delete_avatar_html: <i class="icon-trash"></i> delete
     index:
       title: "All users"
       head: "All users"
@@ -27,6 +32,12 @@ en:
       desires: "Desires"
     user:
       delete_html: <i class="icon-trash"></i> Delete
+  user_sessions:
+    new:
+      title: "Login"
+      head: "Login"    
+      new_user: "New user?"
+      sign_up_now: "Sign up now!"
   layouts:
     header:
       home: "Home"

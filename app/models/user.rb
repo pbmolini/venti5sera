@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_one :follower, through: :reverse_relationship, source: :follower
 
+  default_scope order: 'users.name'
+
 	def feed
 		Desire.where("user_id = ?", self)
 	end

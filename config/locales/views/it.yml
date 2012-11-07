@@ -1,11 +1,15 @@
 it:
   static_pages:
     welcome:
-      welcome_text: "Benvenuto su Venti5Sera!"
+      welcome_text: "Benvenuto su Venti5sera!"
       welcome_subtext: "Questa è la pagina iniziale dell'applicazione Venti5sera."
     about:
+      title: "About"
+      head: "About"
       about_text: ""
     help:
+      title: "Aiuto"
+      head: "Aiuto" 
       help_text: ""
     home:
       latest_desires: "Desideri recenti"
@@ -20,6 +24,7 @@ it:
       title: "Modifica utente"
       head: "Aggiorna il tuo profilo"
       edit_gravatar: "modifica su gravatar.com"
+      delete_avatar_html: <i class="icon-trash"></i> cancella
     index:
       title: "Tutti gli utenti"
       head: "Tutti gli utenti"
@@ -27,6 +32,12 @@ it:
       desires: "Desideri"
     user:
       delete_html: <i class="icon-trash"></i> Elimina
+  user_sessions:
+    new:
+      title: "Accedi"
+      head: "Accedi" 
+      new_user: "Nuovo utente?"
+      sign_up_now: "Registrati adesso!"
   layouts:
     header:
       home: "Home"

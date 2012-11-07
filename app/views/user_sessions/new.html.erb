@@ -1,5 +1,5 @@
-<% provide(:title, 'Login') %>
-<h1>Login</h1>
+<% provide(:title, t('.title')) %>
+<h1><%= t('.head') %></h1>
 
 <div class="row">
 	<div class="span6 offset3">
@@ -11,9 +11,9 @@
 		<%= f.label :password %>
 		<%= f.password_field :password %>
 
-		<p><%= f.submit "Login", class: "btn btn-large btn-primary" %></p>
+		<p><%= f.submit t('button.login'), class: "btn btn-large btn-primary" %></p>
 		<% end %>		
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p><%= t('.new_user') %> <%= link_to t('.sign_up_now'), signup_path %></p>
 	</div>
 </div>

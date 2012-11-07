@@ -11,7 +11,7 @@
 
 		<%= avatar_for @user, :thumb %>
 		<% if @user.avatar? %>
-		<%= link_to raw('<i class="icon-trash"></i> remove'), { :controller => "users", :action => "remove_avatar" } %>
+		<%= link_to raw(t('.delete_avatar_html')), { :controller => "users", :action => "remove_avatar" } %>
 		<% else %>
     <%#= gravatar_for @user %>
     <a href="http://gravatar.com/emails" target="_blank"><i class="icon-edit"></i> <%= t('.edit_gravatar') %></a>
