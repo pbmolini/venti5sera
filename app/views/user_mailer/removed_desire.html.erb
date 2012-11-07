@@ -1,5 +1,5 @@
 <p><%= @user.name %>,</p>
 
-<p>The person you follow has just removed a desire!</p>
+<p><%= t('.message') %></p>
 
-<p>Check it out now on <%= link_to "venti5sera", root_path %>!</p>
+<%= t('user_mailer.check_it_out_html', link: link_to('venti5sera', root_url)) %>

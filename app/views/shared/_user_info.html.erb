@@ -6,8 +6,9 @@
   <%= current_user.name %>
 </h1>
 <span>
-  <%= link_to "view my desires", current_user %>
+  <%= link_to t(".view_my_desires"), current_user %>
 </span>
 <span>
-  <%= pluralize(current_user.desires.count, "desire") %>
+  <%#= pluralize(current_user.desires.count, t(".desire")) %>
+  <%= t(".desire", count: current_user.desires.count) %>
 </span>

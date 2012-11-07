@@ -7,6 +7,8 @@ en:
       about_text: ""
     help:
       help_text: ""
+    home:
+      latest_desires: "Latest Desires"
   users:
     fields:
       name: "Name"
@@ -18,6 +20,13 @@ en:
       title: "Edit user"
       head: "Update your profile"
       edit_gravatar: "edit on gravatar.com"
+    index:
+      title: "All users"
+      head: "All users"
+    show:
+      desires: "Desires"
+    user:
+      delete_html: <i class="icon-trash"></i> Delete
   layouts:
     header:
       home: "Home"
@@ -32,3 +41,27 @@ en:
       updated: "Updated"
       created: "Created"
       ago: "ago"
+    user_info:
+      view_my_desires: "view my desires"
+      desire: 
+        one: "%{count} desire"
+        other: "%{count} desires"
+    desire_form:
+      placeholder: "Compose new desire..."
+    stats:
+      someone_following_you_html: <strong id="followers" class="stat">Someone</strong> is following you
+      no_one_following_you_html: <strong id="followers" class="stat">No one</strong> is following you
+      you_follow_someone_html: You are following <strong id="followers" class="stat">someone</strong>
+      you_follow_no_one_html: You are not following <strong id="followers" class="stat">anyone</strong>
+    delete_desire_link:
+      delete_html: <i class="icon-trash"></i> delete
+    edit_desire_link:
+      edit_html: <i class="icon-edit"></i> edit
+  desires:
+    desire:
+      updated: "Updated"
+      created: "Created"
+      ago: "ago"
+    edit:
+      title: "Edit desire"
+      head: "Update your desire"

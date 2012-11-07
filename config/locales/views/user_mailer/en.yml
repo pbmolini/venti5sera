@@ -1,0 +1,33 @@
+en:
+  user_mailer:
+    check_it_out: "Check it out now on the website!"
+    check_it_out_html: "<p>Check it out now on %{link}!</p>"
+    subject:
+      registration_confirmation: "Registration confirmation"
+      new_user_created: "New User registration"
+      start_following: "Someone is following you!"
+      stop_following: "You are not followed anymore"
+      new_desire: "There is a new Desire!"
+      removed_desire: "A Desire has been removed!"
+      updated_desire: "A Desire has been updated!"
+    new_desire:
+      message: "The person you follow has just posted a new desire!"
+    new_user_created:
+      dear_admin: "Dear Administrator"
+      message: "A new user just registered!"
+    registration_confirmation:
+      message: "Thank you for registering!"
+      add_and_follow: "Now you can add desires and follow other users on the website!"
+      add_and_follow_html: "<p>Now you can add desires and follow other users on %{link}!</p>"
+    removed_desire:
+      message: "The person you follow has just removed a desire!"
+    start_following:
+      message: "Someone is following you!"
+      post_new_desire: "Post new desires now on the website!"
+      post_new_desire_html: "<p>Post new desires now on %{link}!</p>"
+    stop_following:
+      message: "Your follower is not following you anymore. "
+      dont_give_up: "Don't give up and go on posting new desires now on the website!"
+      dont_give_up_html: "<p>Don't give up and go on posting new desires now on %{link}!</p>"
+    updated_desire:
+      message: "The person you follow has just updated a desire!"

@@ -1,3 +1,5 @@
 <p><%= @user.name %>,</p>
 
-<p>Someone is following you! Post new desires now on <%= link_to "venti5sera", root_path %>!</p>
+<p><%= t('.message') %></p>
+
+<%= t('.post_new_desire_html', link: link_to('venti5sera', root_url)) %>

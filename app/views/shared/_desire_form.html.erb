@@ -2,7 +2,7 @@
   <%= render 'shared/error_messages', object: f.object %>
   <!-- object: f.object creates a variable called object in the error_messages partial -->
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new desire..." %>
+    <%= f.text_area :content, placeholder: t(".placeholder") %>
   </div>
-  <%= f.submit "Post", class: "btn btn-large btn-success" %>
+  <%= f.submit t("button.post"), class: "btn btn-large btn-success" %>
 <% end %>

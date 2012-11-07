@@ -7,6 +7,8 @@ it:
       about_text: ""
     help:
       help_text: ""
+    home:
+      latest_desires: "Desideri recenti"
   users:
     fields:
       name: "Nome"
@@ -18,11 +20,18 @@ it:
       title: "Modifica utente"
       head: "Aggiorna il tuo profilo"
       edit_gravatar: "modifica su gravatar.com"
+    index:
+      title: "Tutti gli utenti"
+      head: "Tutti gli utenti"
+    show:
+      desires: "Desideri"
+    user:
+      delete_html: <i class="icon-trash"></i> Elimina
   layouts:
     header:
       home: "Home"
       help: "Aiuto"
-      users: "Users"
+      users: "Tutti"
       my_desires: "I miei Desideri"
       profile: "Il mio Profilo"
       sign_in: "Entra"
@@ -32,3 +41,27 @@ it:
       updated: "Aggiornato"
       created: "Creato"
       ago: "fa"
+    user_info:
+      view_my_desires: "vai ai miei desideri"
+      desire: 
+        one: "%{count} desiderio"
+        other: "%{count} desideri"
+    desire_form:
+      placeholder: "Scrivi un nuovo desiderio..."
+    stats:
+      someone_following_you_html: <strong id="followers" class="stat">Qualcuno</strong> ti sta seguendo
+      no_one_following_you_html: Non ti sta seguendo <strong id="followers" class="stat">nessuno</strong>
+      you_follow_someone_html: Stai seguendo <strong id="followers" class="stat">qualcuno</strong>
+      you_follow_no_one_html: Non stai seguendo <strong id="followers" class="stat">nessuno</strong>
+    delete_desire_link:
+      delete_html: <i class="icon-trash"></i> cancella
+    edit_desire_link:
+      edit_html: <i class="icon-edit"></i> cambia
+  desires:
+    desire:
+      updated: "Aggiornato"
+      created: "Creato"
+      ago: "fa"
+    edit:
+      title: "Modifica desiderio"
+      head: "Modifica il tuo desiderio"

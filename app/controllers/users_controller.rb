@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   	if @user.save
       UserMailer.registration_confirmation(@user).deliver
       UserMailer.new_user_created(@user).deliver
-  		flash[:success] = "Registration success"
+  		flash[:success] = t('flash.registration_success')
   		redirect_to root_path
   	else
   		render new_user_path
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     # User.find(params[:id]).destroy
     user_to_destroy = User.find(params[:id])
     user_to_destroy.destroy unless user_to_destroy.admin
-    flash[:success] = "User destroyed."
+    flash[:success] = t('flash.user_destroyed')
     redirect_to users_url
   end
 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       # Handle a successful update.
-      flash[:success] = "Profile updated"
+      flash[:success] = t('flash.profile_updated')
       redirect_to @user
     else
       render 'edit'
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.avatar = nil
     if @user.save
-      flash[:success] = "Avatar removed, you are using gravatar!"
+      flash[:success] = t('flash.avatar_removed')
       redirect_to @user
     else
       render 'edit'

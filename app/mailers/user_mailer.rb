@@ -1,40 +1,41 @@
 class UserMailer < ActionMailer::Base
-  default from: 'noreply@venti5sera.it'
+  default from: 'venti5sera <noreply@venti5sera.herokuapp.com>'
+  default_url_options[:host] = "venti5sera.herokuapp.com"
 
   def registration_confirmation(user)
   	@user = user
-  	mail(to: "#{user.name} <#{user.email}>", subject: "Registered")
+  	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.registration_confirmation'))
   end
 
   def new_user_created(user)
     @user = user    
     admin = User.where("admin = ?", true).first
-    mail(to: "#{admin.name} <#{admin.email}>", subject: "New User registration")
+    mail(to: "#{admin.name} <#{admin.email}>", subject: t('user_mailer.subject.new_user_created'))
   end
 
   def start_following(user)
   	@user = user
-  	mail(to: "#{user.name} <#{user.email}>", subject: "Someone is following you!")
+  	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.start_following'))
   end
 
   def stop_following(user)
   	@user = user
-  	mail(to: "#{user.name} <#{user.email}>", subject: "You are not followed anymore")
+  	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.stop_following'))
   end
 
   def new_desire(user)
   	@user = user
-  	mail(to: "#{user.name} <#{user.email}>", subject: "There is a new Desire!")
+  	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.new_desire'))
   end
 
   def removed_desire(user)
   	@user = user
-  	mail(to: "#{user.name} <#{user.email}>", subject: "A Desire has been removed!")
+  	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.removed_desire'))
   end
 
   def updated_desire(user)
   	@user = user
-  	mail(to: "#{user.name} <#{user.email}>", subject: "A Desire has been updated!")
+  	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.updated_desire'))
   end
 
 end

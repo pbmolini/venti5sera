@@ -6,7 +6,7 @@ class DesiresController < ApplicationController
 		@desire = current_user.desires.build(params[:desire])
 		if @desire.save
 			UserMailer.new_desire(current_user.follower).deliver if current_user.follower
-			flash[:success] = "Desire created!"
+			flash[:success] = t('flash.desire_created')
 			redirect_to root_url
 		else
 			# @feed_items = current_user.feed.paginate(page: params[:page])
@@ -30,7 +30,7 @@ class DesiresController < ApplicationController
     if @desire.update_attributes(params[:desire])
 			UserMailer.updated_desire(current_user.follower).deliver if current_user.follower
       # Handle a successful update.
-      flash[:success] = "Desire updated"
+      flash[:success] = t('flash.desire_updated')
       redirect_to current_user
     else
       render 'edit'

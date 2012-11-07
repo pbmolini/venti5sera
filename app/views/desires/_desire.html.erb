@@ -2,11 +2,14 @@
   <span class="content"><%= raw link_generator(desire.content) %></span>
   <span class="timestamp">
   	<% if (desire.updated_at > desire.created_at) %>
-  	Updated <%= time_ago_in_words(desire.updated_at) %> ago.
-  	<% else %>
-    Posted <%= time_ago_in_words(desire.created_at) %> ago.
+    <%= t('.updated') %> <!-- leave a space -->
+    <% else %>
+    <%= t('.created') %> <!-- leave a space -->
     <% end %>
+    <%= time_ago_in_words(desire.updated_at) %> <%= t('.ago') %>.
   </span>
+  <% if current_user?(desire.user) %>  
   <%= render 'shared/delete_desire_link', desire: desire %> | 
   <%= render 'shared/edit_desire_link', desire: desire %>
+  <% end %>
 </li>

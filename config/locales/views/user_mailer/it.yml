@@ -1,0 +1,33 @@
+it:
+  user_mailer:
+    check_it_out: "Dai un'occhiata sul sito!"
+    check_it_out_html: "<p>Dai un'occhiata su %{link}!</p>"
+    subject:
+      registration_confirmation: "Conferma Registrazione"
+      new_user_created: "Registrazione nuovo utente"
+      start_following: "Qualcuno ha iniziato a seguirti!"
+      stop_following: "Non sei più seguito"
+      new_desire: "C'è un nuovo desiderio!"
+      removed_desire: "Un desiderio è stato cancellato!"
+      updated_desire: "Un desiderio è stato aggiornato!"
+    new_desire:
+      message: "La tua persona ha appena aggiunto un nuovo desiderio!"
+    new_user_created:
+      dear_admin: "Gentile Amministratore"
+      message: "un nuovo utente si è appena registrato!"
+    registration_confirmation:
+      message: "Grazie per esserti registrato!"
+      add_and_follow: "Adesso puoi aggiungere i tuoi desideri e seguire la tua persona sul sito!"
+      add_and_follow_html: "<p>Adesso puoi aggiungere i tuoi desideri e seguire la tua persona su %{link}!</p>"
+    removed_desire:
+      message: "La tua persona ha appena cancellato un desiderio!"
+    start_following:
+      message: "Qualcuno ha iniziato a seguirti!"
+      post_new_desire: "Aggiungi nuovi desideri sul sito!"
+      post_new_desire_html: "<p>Aggiungi nuovi desideri su %{link}!</p>"
+    stop_following:
+      message: "La persona che ti stava seguendo ha smesso di seguirti."
+      dont_give_up: "Non ti preoccupare e continua ad aggiungere nuovi desideri sul sito!"
+      dont_give_up_html: "<p>Non ti preoccupare e continua ad aggiungere nuovi desideri su %{link}!</p>"
+    updated_desire:
+      message: "La tua persona ha appena aggiornato uno dei suoi desideri!"

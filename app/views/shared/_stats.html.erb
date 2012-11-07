@@ -1,15 +1,9 @@
 <% @user ||= current_user %>
 <div class="stats">
   <a href="#">
-    <strong id="following" class="stat">
-      <%= @user.followed_user ? 1 : 0 %>
-    </strong>
-    following
+    <%= @user.followed_user ? t('.you_follow_someone_html') : t('.you_follow_no_one_html') %>
   </a>
   <a href="#">
-    <strong id="followers" class="stat">
-      <%= @user.follower ? 1 : 0 %>
-    </strong>
-    followers
+    <%= @user.follower ? t('.someone_following_you_html') : t('.no_one_following_you_html') %>   
   </a>
 </div>

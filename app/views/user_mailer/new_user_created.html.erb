@@ -1,6 +1,7 @@
-<p>Dear Administrator,</p>
+<p><%= t('.dear_admin') %>,</p>
 
-<p>A new user just registered!</p>
+<p><%= t('.message') %></p>
+
 <p><%= @user.name %>, <%= @user.email %></p>
 
-<p>Check it out now on <%= link_to "venti5sera", root_path %>!</p>
+<%= t('user_mailer.check_it_out_html', link: link_to('venti5sera', root_url)) %>

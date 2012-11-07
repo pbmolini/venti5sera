@@ -3,7 +3,7 @@
 	<%= avatar_for user, :thumb %>
 	<%= link_to user.name, user %>
 	<% if current_user && current_user.admin? && !current_user?(user) %>
-    | <%= link_to (raw '<i class="icon-trash"></i>'), user, method: :delete,
+    | <%= link_to (raw t('.delete_html')), user, method: :delete,
                                   data: { confirm: t(:are_you_sure) } %>
   <% end %>
 </li>

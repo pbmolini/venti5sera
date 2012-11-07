@@ -1,5 +1,5 @@
 <p><%= @user.name %>,</p>
 
-<p>Thank you for registering!</p>
+<p><%= t('.message') %></p>
 
-<p>Now you can add desires and follow other users on <%= link_to "venti5sera", root_path %></p>
+<%= t('.add_and_follow_html', link: link_to('venti5sera', root_url)) %>

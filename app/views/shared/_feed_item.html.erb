@@ -7,11 +7,14 @@
   <span class="content"><%= raw(link_generator(feed_item.content)) %></span>
   <span class="timestamp">
     <% if (feed_item.updated_at > feed_item.created_at) %>
-  	<%= t('.updated') %> <%= time_ago_in_words(feed_item.updated_at) %> <%= t('.ago') %>.
+  	<%= t('.updated') %> <!-- leave a space -->
   	<% else %>
-    <%= t('.created') %> <%= time_ago_in_words(feed_item.updated_at) %> <%= t('.ago') %>.
+    <%= t('.created') %> <!-- leave a space -->
     <% end %>
+    <%= time_ago_in_words(feed_item.updated_at) %> <%= t('.ago') %>.
   </span>
+  <% if current_user?(feed_item.user) %>
    <%= render 'shared/delete_desire_link', desire: feed_item %> | 
    <%= render 'shared/edit_desire_link', desire: feed_item %>
+  <% end %>
 </li>

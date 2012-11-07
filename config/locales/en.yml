@@ -10,6 +10,9 @@ en:
   sign_out: "Sign out"
   delete: "delete"
   edit: "edit"
+  will_paginate:
+    next_label: "Next"
+    previous_label: "Previous"
   button: 
     signup: "Signup!"
     login: "Login"
@@ -17,4 +20,13 @@ en:
     edit: "Edit"
     save_changes: "Save changes"
     create_account: "Create my account"
+  flash:
+    desire_created: "Desire created!"
+    desire_updated: "Desire updated"
+    login_success: "Login successful!"
+    logout_success: "Logout successful!"
+    registration_success: "Registration success"
+    user_destroyed: "User destroyed."
+    profile_updated: "Profile updated"
+    avatar_removed: "Avatar removed, you are using gravatar!"
 
