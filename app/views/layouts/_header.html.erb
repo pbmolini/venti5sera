@@ -18,12 +18,12 @@
               <li><%= link_to raw("<i class='icon-user'></i> #{t('.profile')}"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to raw("<i class='icon-off'></i> #{t('.sign_out')}"), signout_path, method: "delete" %>
+                <%= link_to raw("<i class='icon-signout'></i> #{t('.sign_out')}"), signout_path, method: "delete" %>
               </li>
             </ul>
           </li>
           <% else %>
-          <li><%= link_to t(".sign_in"), signin_path %></li>
+          <li><%= link_to raw("<i class='icon-signin'></i> #{t('.sign_in')}"), signin_path %></li>
           <% end %>
         </ul>
       </nav>

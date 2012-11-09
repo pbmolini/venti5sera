@@ -1,21 +1,25 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
+    make_admin
     make_users
     make_desires
     #make_relationships
   end
 end
 
-def make_users
+def make_admin
   # this first user is the admin
   admin = User.create!(name: "Example Admin",
                        email: "admin@example.com",
                        password: "foobar",
                        password_confirmation: "foobar")
   admin.toggle!(:admin) # we set this way because it is not attr_accessible
-  # create others
-  99.times do |n|
+end
+
+def make_users
+  # create other users
+  49.times do |n|
     name  = Faker::Name.name
     email = "example-#{n+1}@example.com"
     password  = "password"

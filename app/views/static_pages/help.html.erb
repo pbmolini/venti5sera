@@ -1,3 +1,8 @@
 <% provide(:title, t('.title')) %>
 <h1><%= t('.head') %></h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<% begin %>
+<%= render "help_text_#{I18n.locale}" %>
+<% rescue ActionView::MissingTemplate %>
+<%= render "help_text" %>
+<% end %>
+<%#= t('.help_text_html') %>

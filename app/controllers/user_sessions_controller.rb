@@ -11,7 +11,7 @@ class UserSessionsController < ApplicationController
     user = User.find_by_email(params[:user_session][:email].downcase)
     if @user_session.save
       flash[:success] = t('flash.login_success')
-      redirect_back_or_default user
+      redirect_back_or_default root_path
     else
       render :action => :new
     end
