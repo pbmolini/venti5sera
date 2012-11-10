@@ -35,9 +35,9 @@ Venti5sera::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  # Mailer stuff
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
+  # Mailer stuff - put in environment.rb 
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end

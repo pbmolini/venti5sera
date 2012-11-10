@@ -1,10 +1,26 @@
 namespace :db do
   desc "Fill database with sample data"
-  task populate: :environment do
-    make_admin
-    make_users
-    make_desires
+  task populate: [:environment, :generate_admin, :generate_users, :generate_desires] do
+    puts "== DB populated! =="
+    # make_admin
+    # make_users
+    # make_desires
     #make_relationships
+  end
+
+  task generate_admin: :environment do
+    puts "== Creating admin =="
+    make_admin
+  end
+
+  task generate_users: :environment do
+    puts "== Creating users =="
+    make_users
+  end
+
+  task generate_desires: :environment do
+    puts "== Creating desires =="
+    make_desires
   end
 end
 
