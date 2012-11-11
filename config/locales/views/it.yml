@@ -65,6 +65,7 @@ it:
         other: "%{count} desideri"
     desire_form:
       placeholder: "Scrivi un nuovo desiderio..."
+      chars_left: "caratteri rimanenti"
     stats:
       someone_following_you_html: <strong id="followers" class="stat">Qualcuno</strong> ti sta seguendo
       no_one_following_you_html: Non ti sta seguendo <strong id="followers" class="stat">nessuno</strong>

@@ -1,8 +1,12 @@
 <%= form_for(@desire) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <!-- object: f.object creates a variable called object in the error_messages partial -->
-  <div class="field">
-    <%= f.text_area :content, placeholder: t(".placeholder") %>
+  <div class="characters_left">
+  	<strong id="charNum">1024</strong><span> <%= t('.chars_left') %>&nbsp</span>
   </div>
+  <div class="field">
+    <%= f.text_area :content, placeholder: t(".placeholder"), onkeyup: "countChar(this)" %>
+  </div>
+
   <%= f.submit t("button.post"), class: "btn btn-large btn-success" %>
 <% end %>

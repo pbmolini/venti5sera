@@ -65,6 +65,7 @@ en:
         other: "%{count} desires"
     desire_form:
       placeholder: "Compose new desire..."
+      chars_left: "characters left"
     stats:
       someone_following_you_html: <strong id="followers" class="stat">Someone</strong> is following you
       no_one_following_you_html: <strong id="followers" class="stat">No one</strong> is following you
