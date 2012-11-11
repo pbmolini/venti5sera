@@ -16,8 +16,14 @@ it:
   users:
     fields:
       name: "Nome"
+      name_placeholder: "Scrivi nome e cognome"
+      email_placeholder: "Scrivi un indirizzo email valido"
       password: "Password"
       confirmation: "Conferma Password"
+      password_placeholder: "Scegli la password"
+      new_password_placeholder: "Scrivi la nuova password"
+      confirmation_placeholder: "Conferma la password"
+      new_confirmation_placeholder: "Conferma la nuova password"
     new:
       signup: "Registrazione"
     edit:

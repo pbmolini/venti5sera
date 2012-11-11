@@ -4,8 +4,11 @@
   <h2>
     <%= t ".welcome_subtext" %>
   </h2>
-
-  <%= link_to t('button.signup'), signup_path, class: "btn btn-large btn-primary" %>
+	<p>
+		<%= link_to t('button.login'), signin_path, class: "btn btn-large btn-success" %>
+		&nbsp oppure &nbsp
+  	<%= link_to t('button.signup'), signup_path, class: "btn btn-large btn-primary" %>
+	</p>
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

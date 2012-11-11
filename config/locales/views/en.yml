@@ -16,8 +16,14 @@ en:
   users:
     fields:
       name: "Name"
+      name_placeholder: "Write here your first and last name"
+      email_placeholder: "Write here a valid email address"
       password: "Password"
       confirmation: "Password Confirmation"
+      password_placeholder: "Choose your password"
+      new_password_placeholder: "Choose your new password"
+      confirmation_placeholder: "Confirm your password"
+      new_confirmation_placeholder: "Confirm your new password"
     new:
       signup: "Sign up"
     edit:
