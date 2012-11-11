@@ -1,7 +1,5 @@
 # Venti5sera
 
-## Why this application
-
 I have a huge family with some ancient traditions. One of them is the "Christmas presents chain"
 in which we do a lottery a couple of months before Christmas to select who will give presents to whom.
 I used to manage the wishlists via email but it soon became a mess, so I decided to create this 
@@ -16,7 +14,7 @@ this stuff is worth it, you can buy me a beer in return.
 ## What does *venti5sera* mean?
 
 In my family we traditionally have the Christmas party in the evening of Dec. 25th, so in 
-Italian the name *venti5sera* means "the evening of 25th".
+Italian the name *venti5sera* means "the evening of 25th". Well, actually it means *twenty5thevening*.
 
 ## Acknowledgments
 
