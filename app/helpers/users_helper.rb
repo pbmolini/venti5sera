@@ -9,7 +9,8 @@ module UsersHelper
 
 	def avatar_for(user, size)
 		if user.avatar?
-			image_tag user.avatar.url size
+			# image_tag user.avatar.url size 
+			image_tag((image_path user.avatar.url size), alt: user.name, class: "gravatar")
 		else
 			case size
 			when :small
