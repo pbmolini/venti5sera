@@ -38,6 +38,7 @@ it:
       desires: "Desideri"
     user:
       delete_html: <i class="icon-trash"></i> Elimina
+      edit_html: <i class="icon-trash"></i> Modifica
   user_sessions:
     new:
       title: "Accedi"

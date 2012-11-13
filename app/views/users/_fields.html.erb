@@ -3,7 +3,7 @@
 <%= f.label :name, t('.name') %>
 <%= f.text_field :name, placeholder: t('.name_placeholder') %>
 
-<% if !current_user %>
+<% if !current_user || current_user.admin %>
 <%= f.label :email %>
 <%= f.email_field :email, placeholder: t('.email_placeholder')  %>
 <% end %>

@@ -38,6 +38,7 @@ en:
       desires: "Desires"
     user:
       delete_html: <i class="icon-trash"></i> Delete
+      edit_html: <i class="icon-trash"></i> Edit
   user_sessions:
     new:
       title: "Login"

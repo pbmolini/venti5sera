@@ -5,6 +5,7 @@
 	<% if current_user && current_user.admin? && !current_user?(user) %>
     | <%= link_to (raw t('.delete_html')), user, method: :delete,
                                   data: { confirm: t(:are_you_sure) } %>
+    | <%= link_to (raw t('.edit_html')), edit_user_path(user) %>
   <% end %>
   <span class="subtext">
   	<%= t("shared.user_info.desire", count: user.desires.count) %>
