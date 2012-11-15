@@ -34,6 +34,9 @@ en:
     index:
       title: "All users"
       head: "All users"
+      total_users:
+        one: "%{count} user"
+        other: "%{count} total users"
     show:
       desires: "Desires"
     user:

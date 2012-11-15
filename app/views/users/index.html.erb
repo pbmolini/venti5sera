@@ -1,5 +1,10 @@
 <% provide(:title, t('.title')) %>
 <h1><%= t('.head') %></h1>
+<% if current_user && current_user.admin %>
+<h5>
+	<%= t(".total_users", count: @tot_users) %>
+</h5>
+<% end %>
 
 <%=	will_paginate %>
 

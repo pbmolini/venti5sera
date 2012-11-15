@@ -4,13 +4,13 @@ module UsersHelper
 		gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
 		size = options[:size]
 		gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-		image_tag(gravatar_url, alt: user.name, class: "gravatar")
+		image_tag(gravatar_url, alt: user.name, class: "gravatar img-polaroid")
 	end
 
 	def avatar_for(user, size)
 		if user.avatar?
 			# image_tag user.avatar.url size 
-			image_tag((image_path user.avatar.url size), alt: user.name, class: "gravatar")
+			image_tag((image_path user.avatar.url size), alt: user.name, class: "gravatar img-polaroid")
 		else
 			case size
 			when :small

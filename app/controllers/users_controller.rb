@@ -44,6 +44,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    @tot_users = User.all.count
     @users = User.paginate(page: params[:page], per_page: 20)
   end
 
