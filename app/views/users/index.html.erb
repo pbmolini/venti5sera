@@ -6,6 +6,12 @@
 </h5>
 <% end %>
 
+<% if current_user && params[:search] %>
+<h5>
+	<%= t(".search_results_for", search_key: "#{params[:search]}") %>
+</h5>
+<% end %>
+
 <%=	will_paginate %>
 
 <ul class="users">

@@ -41,4 +41,13 @@ class User < ActiveRecord::Base
     relationship.destroy
   end
 
+  def self.search(search)
+    if search
+      _users = User.arel_table
+      User.where(_users[:name].matches("%#{search}%"))
+    else
+      find(:all)
+    end
+  end
+
 end

@@ -4,7 +4,7 @@
   <span class="user">
     <%= link_to feed_item.user.name, feed_item.user %>
   </span>
-  <span class="content"><%= raw(link_generator(feed_item.content)) %></span>
+  <span class="content"><%= raw(link_generator(h(feed_item.content))) %></span>
   <span class="timestamp">
     <% if (feed_item.updated_at > feed_item.created_at) %>
   	<%= t('.updated') %> <!-- leave a space -->

@@ -45,7 +45,11 @@ class UsersController < ApplicationController
 
   def index
     @tot_users = User.all.count
-    @users = User.paginate(page: params[:page], per_page: 20)
+    if current_user && params[:search]
+      @users = User.search(params[:search]).paginate(page: params[:page], per_page: 20)
+    else
+      @users = User.paginate(page: params[:page], per_page: 20)
+    end
   end
 
   def show

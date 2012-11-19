@@ -37,6 +37,7 @@ en:
       total_users:
         one: "%{count} user"
         other: "%{count} total users"
+      search_results_for: "Results for '%{search_key}'"
     show:
       desires: "Desires"
     user:
@@ -57,6 +58,8 @@ en:
       profile: "Profile"
       sign_in: "Sign in"
       sign_out: "Sign out"
+    search:
+      search_by_name: "Search users"
   shared:
     feed_item:
       updated: "Updated"

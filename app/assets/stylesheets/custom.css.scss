@@ -86,6 +86,17 @@ p {
   };
 }
 
+.navbar-search {
+  padding-left: 10px;
+  padding-right: 10px;
+  .search-in-nav {
+    line-height: 20px;
+  }
+  .btn-in-nav {
+    margin-top: 0px;
+  }
+}
+
 /* footer */
 
 footer {

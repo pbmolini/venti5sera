@@ -2,16 +2,18 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<%= link_to "venti5sera", root_path, id: "logo" %>
+      <% if current_user %>
+      <%= render 'layouts/search' %>
+      <% end %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to raw("<i class='icon-home'></i> #{t('.home')}"), root_path %></li>
+          <li><%= link_to raw("<i class='icon-home'></i> #{t('.home')}"), root_path %></li>
           <li><%= link_to raw("<i class='icon-list'></i> #{t('.users')}"), users_path %></li>
           <li><%= link_to raw("<i class='icon-question-sign'></i> #{t('.help')}"), help_path %></li>
           <% if current_user %>
           <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= current_user.name %>
-              <%#= avatar_for(current_user, :small) %> <b class="caret"></b>
+              <%= current_user.name %> <i class="icon-caret-down"></i>
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to raw("<i class='icon-gift'></i> #{t('.my_desires')}"), current_user %></li>
