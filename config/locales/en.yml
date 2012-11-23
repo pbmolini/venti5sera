@@ -24,10 +24,12 @@ en:
   flash:
     desire_created: "Desire created!"
     desire_updated: "Desire updated"
+    desire_removed: "Desire removed"
     login_success: "Login successful!"
     logout_success: "Logout successful!"
     registration_success: "Registration success"
     user_destroyed: "User destroyed."
     profile_updated: "Profile updated"
     avatar_removed: "Avatar removed, you are using gravatar!"
+    mail_problem: "There was a problem with sending the email."
 

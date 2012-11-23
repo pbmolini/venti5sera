@@ -5,8 +5,12 @@ class DesiresController < ApplicationController
 	def create
 		@desire = current_user.desires.build(params[:desire])
 		if @desire.save
-			UserMailer.new_desire(current_user.follower).deliver if current_user.follower
-			flash[:success] = t('flash.desire_created')
+			begin
+				UserMailer.new_desire(current_user.follower).deliver if current_user.follower
+				flash[:success] = t('flash.desire_created')
+			rescue Timeout::Error
+				flash[:success] = "#{t('flash.desire_created')} #{t('flash.mail_problem')}"
+			end
 			redirect_to root_url
 		else
 			# @feed_items = current_user.feed.paginate(page: params[:page])
@@ -17,7 +21,12 @@ class DesiresController < ApplicationController
 
 	def destroy
 		@desire.destroy
-		UserMailer.removed_desire(current_user.follower).deliver if current_user.follower
+		begin
+			UserMailer.removed_desire(current_user.follower).deliver if current_user.follower
+			flash[:success] = t('flash.desire_removed')
+		rescue Timeout::Error
+			flash[:success] = "#{t('flash.desire_removed')} #{t('flash.mail_problem')}"
+		end
 		redirect_to root_url
 	end
 
@@ -28,9 +37,13 @@ class DesiresController < ApplicationController
   def update
     @desire = Desire.find(params[:id])
     if @desire.update_attributes(params[:desire])
-			UserMailer.updated_desire(current_user.follower).deliver if current_user.follower
-      # Handle a successful update.
-      flash[:success] = t('flash.desire_updated')
+    	begin
+				UserMailer.updated_desire(current_user.follower).deliver if current_user.follower
+	      # Handle a successful update.
+	      flash[:success] = t('flash.desire_updated')
+	    rescue Timeout::Error
+	    	flash[:success] = "#{t('flash.desire_updated')} #{t('flash.mail_problem')}"
+	    end
       redirect_to current_user
     else
       render 'edit'

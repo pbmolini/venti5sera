@@ -24,9 +24,11 @@ it:
   flash:
     desire_created: "Desiderio creato!"
     desire_updated: "Desiderio aggiornato!"
+    desire_removed: "Desiderio cancellato!"
     login_success: "Login effettuato!"
     logout_success: "Logout effettuato!"
     registration_success: "Registrazione avvenuta!"
     user_destroyed: "Utente cancellato."
     profile_updated: "Profilo aggiornato"
     avatar_removed: "Avatar cancellato, adesso stai usando gravatar!"
+    mail_problem: "Si è verificato un problema con l'invio della email."

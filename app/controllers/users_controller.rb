@@ -11,9 +11,13 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(params[:user])
   	if @user.save
-      UserMailer.registration_confirmation(@user).deliver
-      UserMailer.new_user_created(@user).deliver
-  		flash[:success] = t('flash.registration_success')
+      begin
+        UserMailer.registration_confirmation(@user).deliver
+        UserMailer.new_user_created(@user).deliver
+  		  flash[:success] = t('flash.registration_success')
+      rescue Timeout::Error
+        flash[:success] = "#{t('flash.registration_success')} #{t('flash.mail_problem')}"
+      end
   		redirect_to root_path
   	else
   		render new_user_path
