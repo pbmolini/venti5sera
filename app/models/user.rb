@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_one :follower, through: :reverse_relationship, source: :follower
 
+  validate :max_users
+
   default_scope order: 'users.name'
 
 	def feed
@@ -48,6 +50,10 @@ class User < ActiveRecord::Base
     else
       find(:all)
     end
+  end
+
+  def max_users
+    errors.add(:max_users, "reached") if User.all.count >= ENV["MAX_USERS"].to_i
   end
 
 end

@@ -6,8 +6,10 @@
   </h2>
 	<p>
 		<%= link_to t('button.login'), signin_path, class: "btn btn-large btn-success" %>
-		&nbsp oppure &nbsp
+		<% unless max_users_reached? %>
+		&nbsp <%= t('.or') %> &nbsp
   	<%= link_to t('button.signup'), signup_path, class: "btn btn-large btn-primary" %>
+  	<% end %>
 	</p>
 </div>
 

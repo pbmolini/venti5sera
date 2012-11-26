@@ -24,6 +24,7 @@ doc/
 
 # Ignore private files
 config/initializers/01_smtp_setup.rb
+config/initializers/02_env.rb
 config/initializers/dropbox_setup.rb
 heroku_config.sh
 

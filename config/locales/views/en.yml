@@ -3,6 +3,7 @@ en:
     welcome:
       welcome_text: "Welcome to Venti5sera!"
       welcome_subtext: "This is the home page for Venti5sera application."
+      or: "or"
     about:
       title: "About"
       head: "About" 

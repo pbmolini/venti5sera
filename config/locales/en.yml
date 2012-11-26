@@ -32,4 +32,5 @@ en:
     profile_updated: "Profile updated"
     avatar_removed: "Avatar removed, you are using gravatar!"
     mail_problem: "There was a problem with sending the email."
+    max_users_reached: "We have already reached the maximum number of users."
 

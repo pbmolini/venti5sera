@@ -3,6 +3,7 @@ it:
     welcome:
       welcome_text: "Benvenuto su Venti5sera!"
       welcome_subtext: "Questa è la pagina iniziale dell'applicazione Venti5sera."
+      or: "oppure"
     about:
       title: "About"
       head: "About"

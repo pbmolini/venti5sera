@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def new
   	@user = User.new
+    flash[:notice] = t('flash.max_users_reached') if max_users_reached?
   end
 
   def create

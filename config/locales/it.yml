@@ -32,3 +32,4 @@ it:
     profile_updated: "Profilo aggiornato"
     avatar_removed: "Avatar cancellato, adesso stai usando gravatar!"
     mail_problem: "Si è verificato un problema con l'invio della email."
+    max_users_reached: "Abbiamo già raggiunto il numero massimo di utenti."
