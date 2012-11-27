@@ -5,7 +5,7 @@ module DesiresHelper
   end
 
   def link_generator(text)
-  text.gsub(/(https?:\/\/[^\s]+)/, '<a target="_blank" href="\1">\1</a>')
+  text.gsub(/(https?:\/\/[^\s()]+)/, '<a target="_blank" href="\1">\1</a>')
 end
 
 private
