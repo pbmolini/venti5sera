@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_one :follower, through: :reverse_relationship, source: :follower
 
-  validate :max_users
+  validate :max_users, on: :create
 
   default_scope order: 'users.name'
 
