@@ -15,14 +15,14 @@ class UsersController < ApplicationController
       begin
         UserMailer.registration_confirmation(@user).deliver
         UserMailer.new_user_created(@user).deliver
-  		  flash[:success] = t('flash.registration_success')
+        flash[:success] = t('flash.registration_success')
       rescue Timeout::Error
         flash[:success] = "#{t('flash.registration_success')} #{t('flash.mail_problem')}"
       end
-  		redirect_to root_path
-  	else
-  		render new_user_path
-  	end
+      redirect_to root_path
+    else
+      render new_user_path
+    end
   end
 
   def destroy
@@ -75,8 +75,8 @@ class UsersController < ApplicationController
 
   private
 
-    def require_admin
-      redirect_to(root_path) unless current_user.admin?
-    end
+  def require_admin
+    redirect_to(root_path) unless current_user.admin?
+  end
 
 end
