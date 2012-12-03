@@ -1,4 +1,5 @@
-<div class="center hero-unit">
+<% user_agent = UserAgent.parse(request.env['HTTP_USER_AGENT'].downcase) %>
+<div class="center <%= user_agent.mobile? ? "well" : "hero-unit" %>">
   <h1><%= t ".welcome_text" %></h1>
 
   <h2>

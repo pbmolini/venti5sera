@@ -8,6 +8,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'authlogic'
+gem 'useragent'
 
 # Paperclip
 gem "paperclip", "~> 3.0"
