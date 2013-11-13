@@ -10,6 +10,7 @@ module UsersHelper
 	def avatar_for(user, size)
 		if user.avatar?
 			# image_tag user.avatar.url size 
+			# if you have an error here you probably have to install ImageMagick locally
 			image_tag((image_path user.avatar.url size), alt: user.name, class: "gravatar img-polaroid")
 		else
 			case size

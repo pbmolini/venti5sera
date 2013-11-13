@@ -2,7 +2,7 @@ it:
   static_pages:
     welcome:
       welcome_text: "Benvenuto su Venti5sera!"
-      welcome_subtext: "Questa è la pagina iniziale dell'applicazione Venti5sera."
+      welcome_subtext: "la migliore applicazione web per lo scambio dei regali"
       or: "oppure"
     about:
       title: "About"
@@ -41,6 +41,8 @@ it:
       search_results_for: "Risultati per '%{search_key}'"
     show:
       desires: "Desideri"
+      current: "In corso"
+      previous: "Precedenti"
     user:
       delete_html: <i class="icon-trash"></i> Elimina
       edit_html: <i class="icon-trash"></i> Modifica

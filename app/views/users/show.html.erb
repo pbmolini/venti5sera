@@ -6,7 +6,7 @@
 				<%#= gravatar_for @user, size: 150 %>				
 				<%#= image_tag @user.avatar.url :medium %>
 				<%= avatar_for @user, :medium %>
-				<%=  @user.name %>
+				<%= @user.name %>
 			</h1>
 		</section>
 	</aside>
@@ -14,9 +14,31 @@
 		<%= render 'follow_form' if current_user %>
     <% if @user.desires.any? %>
       <h3><%= t('.desires') %> (<%= @user.desires.count %>)</h3>
-      <ol class="desires">
-        <%= render @desires %>
-      </ol>
+     
+        <ul class="nav nav-tabs">
+        	<li class="active">
+        		<a href="#current" data-toggle="tab">
+        			<%= t '.current' %>	
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#previous" data-toggle="tab">
+        			<%= t '.previous' %>
+        		</a>
+        	</li>
+        </ul>
+        <div class="tab-content">
+        	<div class="tab-pane active" id="current">
+        		<ol class="desires">
+        			<%= render @current_desires %>
+        		</ol>
+        	</div>
+        	<div class="tab-pane" id="previous">
+        		<ol class="desires">
+        			<%= render @previous_desires %>
+        		</ol>
+        	</div>
+        </div>
       <%= will_paginate @desires %>
     <% end %>
   </div>

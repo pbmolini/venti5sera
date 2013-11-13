@@ -48,7 +48,7 @@ end
 
 def make_desires
 
-  # create 50 desires for the firs 6 users
+  # create 25 desires for the first 6 users
   users = User.all(limit: 6)
   25.times do
     content = Faker::Lorem.sentence(5)

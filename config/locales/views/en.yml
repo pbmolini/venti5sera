@@ -2,7 +2,7 @@ en:
   static_pages:
     welcome:
       welcome_text: "Welcome to Venti5sera!"
-      welcome_subtext: "This is the home page for Venti5sera application."
+      welcome_subtext: "the best web application for exchanging gifts"
       or: "or"
     about:
       title: "About"
@@ -41,6 +41,8 @@ en:
       search_results_for: "Results for '%{search_key}'"
     show:
       desires: "Desires"
+      current: "Current"
+      previous: "Previous"
     user:
       delete_html: <i class="icon-trash"></i> Delete
       edit_html: <i class="icon-trash"></i> Edit

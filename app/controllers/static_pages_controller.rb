@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
 		if current_user
 			@desire = current_user.desires.build
 			# @feed_items = current_user.feed.paginate(page: params[:page])
-			@feed_items = Desire.all(limit: 10)
+			@feed_items = Desire.all.select{ |d| d.current_desire? }.take(10)
 		end
 	end
 

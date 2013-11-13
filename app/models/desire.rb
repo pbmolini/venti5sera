@@ -6,4 +6,8 @@ class Desire < ActiveRecord::Base
   validates :content, presence: true, length: {maximum: 1024}
   
   default_scope order: 'desires.updated_at DESC'
+
+  def current_desire?
+  	self.updated_at.year == Time.now.year  	
+  end
 end
