@@ -30,3 +30,6 @@ heroku_config.sh
 
 # Ignore files produced by PaperClip
 public/system
+
+# Ignore database dump
+.dump
