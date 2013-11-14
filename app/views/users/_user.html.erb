@@ -8,6 +8,6 @@
     | <%= link_to (raw t('.edit_html')), edit_user_path(user) %>
   <% end %>
   <span class="subtext">
-  	<%= t("shared.user_info.desire", count: user.desires.count) %>
+  	<%= t("shared.user_info.desire", count: user.current_desires.count) %>
   </span>
 </li>

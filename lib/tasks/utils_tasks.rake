@@ -4,7 +4,11 @@ namespace :v5s do
 	task unfollow_all: :environment do
 		puts '=== Unfollowing all ==='
 		User.all.each do |u|
-			u.unfollow! u.followed_user if u.followed_user
+			if u.followed_user
+				u.unfollow! u.followed_user
+				puts "#{u.name} unfollows"
+			end
 		end
+		puts '===       Done      ==='
 	end
 end

@@ -52,13 +52,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def max_users
-    errors.add(:max_users, "reached") if User.all.count >= ENV["MAX_USERS"].to_i
+  def current_desires
+    self.desires.select { |d| d.current_desire? }
   end
 
-  def deliver_password_reset_instructions!
-    reset_perishable_token!
-    Notifier.deliver_password_reset_instructions(self)
+  def max_users
+    errors.add(:max_users, "reached") if User.all.count >= ENV["MAX_USERS"].to_i
   end
 
 end

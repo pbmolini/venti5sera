@@ -60,8 +60,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @desires = @user.desires.paginate(page: params[:page], per_page: 20)
-    @current_desires = @user.desires.select { |d| d.current_desire? }
-    @previous_desires = @user.desires - @current_desires
+    @previous_desires = @user.desires - @user.current_desires
   end
 
   def remove_avatar
