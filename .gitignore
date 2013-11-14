@@ -32,4 +32,4 @@ heroku_config.sh
 public/system
 
 # Ignore database dump
-.dump
+latest.dump
