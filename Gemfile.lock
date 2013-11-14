@@ -35,7 +35,7 @@ GEM
       activerecord (>= 3.2)
       activesupport (>= 3.2)
     bcrypt-ruby (3.1.2)
-    bootstrap-sass (3.0.0.0)
+    bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
       will_paginate
@@ -180,7 +180,7 @@ DEPENDENCIES
   annotate
   authlogic
   bcrypt-ruby
-  bootstrap-sass
+  bootstrap-sass (~> 2.3.2)
   bootstrap-will_paginate
   capybara
   coffee-rails (~> 3.2.1)

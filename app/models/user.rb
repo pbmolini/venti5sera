@@ -56,4 +56,9 @@ class User < ActiveRecord::Base
     errors.add(:max_users, "reached") if User.all.count >= ENV["MAX_USERS"].to_i
   end
 
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    Notifier.deliver_password_reset_instructions(self)
+  end
+
 end

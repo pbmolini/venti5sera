@@ -14,11 +14,12 @@ Venti5sera::Application.routes.draw do
   resources :user_sessions, only: [ :new, :create, :destroy ]
   resources :desires, only: [ :create, :destroy, :edit, :update ]
   resources :relationships, only: [ :create, :destroy ]
+  resources :password_resets, :only => [ :new, :create, :edit, :update ]
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'user_sessions#new'
   match '/signout', to:'user_sessions#destroy'
-
+  match '/forgot_password', to: 'password_resets#new'
   match '/user/:id/remove_avatar', to: "users#remove_avatar"
 
   # The priority is based upon order of creation:

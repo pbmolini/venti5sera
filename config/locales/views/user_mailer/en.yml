@@ -12,6 +12,7 @@ en:
       new_desire: "There is a new Desire!"
       removed_desire: "A Desire has been removed!"
       updated_desire: "A Desire has been updated!"
+      reset_password: "Reset your password"
     new_desire:
       message: "The person you follow has just posted a new desire!"
     new_user_created:
@@ -33,3 +34,7 @@ en:
       dont_give_up_html: "<p>Don't give up and go on posting new desires now on %{link}!</p>"
     updated_desire:
       message: "The person you follow has just updated a desire!"
+    password_reset_instructions:
+      message: "You have recived this email because a request for resetting password has been issued."
+      reset_password_link_html: "To update your password please visit %{link}."
+      this_page: "this page"

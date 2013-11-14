@@ -21,6 +21,8 @@ it:
     follow: "Segui"
     unfollow: "Non seguire più"
     cannot_follow: "Non puoi seguire"
+    reset_password: "Invia email e reimposta password"
+    update_password: "Aggiorna password"
   flash:
     desire_created: "Desiderio creato!"
     desire_updated: "Desiderio aggiornato!"

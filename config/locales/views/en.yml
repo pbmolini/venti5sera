@@ -52,6 +52,18 @@ en:
       head: "Login"    
       new_user: "New user?"
       sign_up_now: "Sign up now!"
+      forgot_pw: "Forgot password?"
+
+  password_resets:
+    new:
+      title: "Reset password"
+      head: "Reset password"
+      message_html: "Please enter your email address below and then press 'Send email and reset password'"
+    edit:
+      title: "Reset password"
+      head: "Reset password"
+      message_html: "Please enter the new password and password confirmation below and then press 'Update Password'"
+
   layouts:
     header:
       home: "Home"

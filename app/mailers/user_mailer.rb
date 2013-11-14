@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   default from: 'venti5sera <noreply@venti5sera.herokuapp.com>'
-  default_url_options[:host] = "venti5sera.herokuapp.com"
+  default_url_options[:host] = Rails.env.development? ? "localhost:3000" : "venti5sera.herokuapp.com"
 
   def registration_confirmation(user)
   	@user = user
@@ -36,6 +36,11 @@ class UserMailer < ActionMailer::Base
   def updated_desire(user)
   	@user = user
   	mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.updated_desire'))
+  end
+
+  def password_reset_instructions(user)
+    @user = user
+    mail(to: "#{user.name} <#{user.email}>", subject: t('user_mailer.subject.reset_password'))    
   end
 
 end

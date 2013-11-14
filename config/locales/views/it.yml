@@ -52,6 +52,16 @@ it:
       head: "Accedi" 
       new_user: "Nuovo utente?"
       sign_up_now: "Registrati adesso!"
+      forgot_pw: "Password dimenticata?"
+  password_resets:
+    new:
+      title: "Password dimenticata"
+      head: "Password dimenticata"
+      message_html: "Scrivi il tuo indirizzo email qui sotto e poi premi 'Invia email e reimposta password'"
+    edit:
+      title: "Reimposta la password"
+      head: "Reimposta la password"
+      message_html: "Scrivi qui sotto la nuova password, confermala e poi premi 'Aggiorna Password'"
   layouts:
     header:
       home: "Home"

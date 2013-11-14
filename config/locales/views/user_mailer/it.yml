@@ -12,6 +12,7 @@ it:
       new_desire: "C'è un nuovo desiderio!"
       removed_desire: "Un desiderio è stato cancellato!"
       updated_desire: "Un desiderio è stato aggiornato!"
+      reset_password: "Reimposta la tua password"
     new_desire:
       message: "La tua persona ha appena aggiunto un nuovo desiderio!"
     new_user_created:
@@ -33,3 +34,7 @@ it:
       dont_give_up_html: "<p>Non ti preoccupare e continua ad aggiungere nuovi desideri su %{link}!</p>"
     updated_desire:
       message: "La tua persona ha appena aggiornato uno dei suoi desideri!"
+    password_reset_instructions:
+      message: "Hai ricevuto questa email perché c'è stata una richiesta di ripristino della password."
+      reset_password_link_html: "Per aggiornare la tua password visita %{link}."
+      this_page: "questa pagina"

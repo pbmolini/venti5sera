@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121111125804) do
+ActiveRecord::Schema.define(:version => 20131113083053) do
 
   create_table "desires", :force => true do |t|
     t.text     "content"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20121111125804) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.datetime "last_request_at"
+    t.string   "perishable_token",    :default => "",    :null => false
   end
+
+  add_index "users", ["perishable_token"], :name => "index_users_on_perishable_token"
 
 end

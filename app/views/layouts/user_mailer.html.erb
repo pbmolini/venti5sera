@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body style="background-color: #f2f5fe">
+  	<div style="width:768px;margin:0 auto;font: 12px/1.4 Verdana,Arial,sans-serif;background:#FFF;color: #444;height:100%;padding:1em">
+  	<p><%= @user ? _("Hi %{user},") %{user:@user.name} : _("Hi,") %></p>
+
+    <%= yield %>
+    <br>
+    <p>
+    	<%= (_(" - The team of <strong>%{btf}</strong>") %{btf:link_to(_("BringTheFood"), root_url)}).html_safe %>
+    </p>
+  </div>
+  <div style="width:768px;margin:0 auto;font: 10px/1.4 Verdana,Arial,sans-serif;">
+  	<p>
+  		<%= (_("This email has been sent to you because you are registered to %{btf}.") %{btf:link_to(_("BringTheFood"), root_url)}).html_safe %>
+  		<br>
+  		<%= _("If you don't want to receive any message from us, you can deactivate your account at any time.") %>
+  	</p>
+  </div>
+  </body>
+</html>

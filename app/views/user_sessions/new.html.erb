@@ -13,7 +13,7 @@
 
 		<p><%= f.submit t('button.login'), class: "btn btn-large btn-success" %></p>
 		<% end %>		
-
+		<small><%= link_to t('.forgot_pw'), forgot_password_path %></small>
 		<% unless max_users_reached? %>
     <p><%= t('.new_user') %> <%= link_to t('.sign_up_now'), signup_path %></p>
     <% end %>
