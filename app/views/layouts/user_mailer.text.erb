@@ -1,0 +1,7 @@
+<%= t("user_mailer.hi_user", user: @admin ? @admin.name : @user.name) %>,
+
+<%= yield %>
+
+<%= t('user_mailer.thanks') %>
+
+<%= t('user_mailer.signature') %>

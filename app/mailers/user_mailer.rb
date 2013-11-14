@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: 'venti5sera <noreply@venti5sera.herokuapp.com>'
+  default from: 'venti5sera <noreply@venti5sera.it>'
   default_url_options[:host] = Rails.env.development? ? "localhost:3000" : "venti5sera.herokuapp.com"
 
   def registration_confirmation(user)
@@ -9,8 +9,8 @@ class UserMailer < ActionMailer::Base
 
   def new_user_created(user)
     @user = user    
-    admin = User.where("admin = ?", true).first
-    mail(to: "#{admin.name} <#{admin.email}>", subject: t('user_mailer.subject.new_user_created'))
+    @admin = User.where("admin = ?", true).first
+    mail(to: "#{@admin.name} <#{@admin.email}>", subject: t('user_mailer.subject.new_user_created'))
   end
 
   def start_following(user)

@@ -1,3 +1,9 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+$(document).ready () ->
+	$('#follow_form_container').on 'click', "#btn-unfollow", () ->
+		$(@).val('<%= I18n.t("button.unfollowing") %>')
+	.on 'click', "#btn-follow", () ->
+		$(@).val('<%= I18n.t("button.following") %>')

@@ -1,9 +1,10 @@
 it:
   user_mailer:
+    hi_user: "Ciao %{user}"
     check_it_out: "Dai un'occhiata sul sito!"
     check_it_out_html: "<p>Dai un'occhiata su %{link}!</p>"
     thanks: "Grazie"
-    signature: "~ Venti5sera team ~"  
+    signature: "~ il team  di venti5sera ~"  
     subject:
       registration_confirmation: "Conferma Registrazione"
       new_user_created: "Registrazione nuovo utente"
@@ -26,6 +27,7 @@ it:
       message: "La tua persona ha appena cancellato un desiderio!"
     start_following:
       message: "Qualcuno ha iniziato a seguirti!"
+      sub_message: "Ogni volta che scriverai un nuovo desiderio, la tua persona riceverà una email."
       post_new_desire: "Aggiungi nuovi desideri sul sito!"
       post_new_desire_html: "<p>Aggiungi nuovi desideri su %{link}!</p>"
     stop_following:
@@ -36,5 +38,6 @@ it:
       message: "La tua persona ha appena aggiornato uno dei suoi desideri!"
     password_reset_instructions:
       message: "Hai ricevuto questa email perché c'è stata una richiesta di ripristino della password."
-      reset_password_link_html: "Per aggiornare la tua password visita %{link}."
+      reset_password_link: "Per aggiornare la tua password vai a questo link: %{link}."
+      reset_password_link_html: "Per aggiornare la tua password vai a %{link}."
       this_page: "questa pagina"

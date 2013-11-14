@@ -20,6 +20,8 @@ en:
     create_account: "Create my account"
     follow: "Follow"
     unfollow: "Unfollow"
+    following: "Following..."
+    unfollowing: "Unfollowing..."
     cannot_follow: "Cannot follow"
     reset_password: "Send email and reset password"
     update_password: "Update password"

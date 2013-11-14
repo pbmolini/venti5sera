@@ -10,7 +10,7 @@
 			</h1>
 		</section>
 	</aside>
-	<div class="span8">
+	<div class="span8" id="follow_form_container">
 		<%= render 'follow_form' if current_user %>
     <% if @user.desires.any? %>
       <h3><%= t('.desires') %> (<%= @user.desires.count %>)</h3>
@@ -39,7 +39,7 @@
         		</ol>
         	</div>
         </div>
-      <%= will_paginate @desires %>
+      <%#= will_paginate @desires %>
     <% end %>
   </div>
 </div>
