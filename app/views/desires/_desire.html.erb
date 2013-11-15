@@ -8,7 +8,7 @@
     <% end %>
     <%= time_ago_in_words(desire.updated_at) %> <%= t('.ago') %>.
   </span>
-  <% if current_user?(desire.user) && desire.current_desire? %>  
+  <% if current_user?(desire.user) && desire.modified_after_last_xmas? %>  
   <%= render 'shared/delete_desire_link', desire: desire %> | 
   <%= render 'shared/edit_desire_link', desire: desire %>
   <% end %>

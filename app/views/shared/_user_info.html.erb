@@ -10,5 +10,5 @@
 </span>
 <span>
   <%#= pluralize(current_user.desires.count, t(".desire")) %>
-  <%= t(".desire", count: current_user.desires.count) %>
+  <%= t(".desire", count: current_user.current_desires.count) %>
 </span>

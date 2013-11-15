@@ -53,7 +53,8 @@ class User < ActiveRecord::Base
   end
 
   def current_desires
-    self.desires.select { |d| d.current_desire? }
+    # self.desires.where 'user_id = ? AND updated_at > ?', self.id, Date.new(Time.now.year-1,12,25)
+    self.desires.select { |d| d.modified_after_last_xmas? }
   end
 
   def max_users

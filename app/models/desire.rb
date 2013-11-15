@@ -7,7 +7,8 @@ class Desire < ActiveRecord::Base
   
   default_scope order: 'desires.updated_at DESC'
 
-  def current_desire?
-  	self.updated_at.year == Time.now.year  	
+  def modified_after_last_xmas?
+  	# desire modified after last Xmas
+  	self.updated_at && self.updated_at > Date.new(Time.now.year - 1, 12, 25)
   end
 end

@@ -13,7 +13,7 @@
     <% end %>
     <%= time_ago_in_words(feed_item.updated_at) %> <%= t('.ago') %>.
   </span>
-  <% if current_user?(feed_item.user) && feed_item.current_desire? %>
+  <% if current_user?(feed_item.user) && feed_item.modified_after_last_xmas? %>
    <%= render 'shared/delete_desire_link', desire: feed_item %> | 
    <%= render 'shared/edit_desire_link', desire: feed_item %>
   <% end %>
