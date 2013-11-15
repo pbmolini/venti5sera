@@ -61,5 +61,8 @@ module Venti5sera
 
     # Mailer default host
     # config.action_mailer.default_url_options = {host: "localhost:3000"}
+
+    # Trouleshooting for heroku, see https://devcenter.heroku.com/articles/rails-asset-pipeline#troubleshooting
+    config.assets.initialize_on_precompile = false
   end
 end
