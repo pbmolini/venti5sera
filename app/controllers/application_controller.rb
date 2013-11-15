@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        redirect_to signin_url, notice: "You must be logged in to access that page"
+        redirect_to signin_url, notice: t('flash.not_allowed_in')
         return false
       end
     end
@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        redirect_to current_user, notice: "You must be logged out to access that page"
+        redirect_to current_user, notice: t('flash.not_allowed_out')
         return false
       end
     end

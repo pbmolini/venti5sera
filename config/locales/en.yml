@@ -37,4 +37,10 @@ en:
     avatar_removed: "Avatar removed, you are using gravatar!"
     mail_problem: "There was a problem with sending the email."
     max_users_reached: "We have already reached the maximum number of users."
+    password_reset_instructions: "Instructions to reset your password have been emailed to you. Check also in Spam!"
+    no_user_with_email: "No user was found with email address %{email}"
+    password_updated: "Your password was successfully updated"
+    cannot_locate_account: "We're sorry, but we could not locate your account"
+    not_allowed_in: "You must be logged in to access that page"
+    not_allowed_out: "You must be logged out to access that page"
 
