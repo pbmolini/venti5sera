@@ -42,7 +42,9 @@ class PasswordResetsController < ApplicationController
   private
 
   def load_user_using_perishable_token
-    @user = User.find_using_perishable_token(params[:id]) # this in not the user_id 
+    # Sometimes find_by works and find_using not
+    # @user = User.find_using_perishable_token(params[:id]) # this in not the user_id 
+    @user = User.find_by_perishable_token(params[:id]) # this in not the user_id 
     # it is the reset_perishable_token in the url like /password_resets/kgdaskjhdgj87/edit
     unless @user
       flash[:error] = t('flash.cannot_locate_account')
