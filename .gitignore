@@ -21,6 +21,7 @@ doc/
 .project
 .DS_Store
 .idea
+.ruby-version
 
 # Ignore private files
 config/initializers/01_smtp_setup.rb
