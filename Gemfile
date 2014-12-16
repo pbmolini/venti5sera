@@ -17,6 +17,9 @@ gem "paperclip-dropbox"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# New Relic
+gem 'newrelic_rpm'
+
 group :development do
 	gem 'sqlite3'
 	gem 'rspec-rails'
