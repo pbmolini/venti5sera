@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# The Ruby version is specified for heroku relate purposes
+ruby '1.9.3'
+
 gem 'rails', '3.2.21'
 gem 'bootstrap-sass', '~> 2.3.2'
 gem 'font-awesome-sass-rails'
