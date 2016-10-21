@@ -3,7 +3,7 @@
 	<aside class="span4">
 		<section>
 			<h1>
-				<%#= gravatar_for @user, size: 150 %>				
+				<%#= gravatar_for @user, size: 150 %>
 				<%#= image_tag @user.avatar.url :medium %>
 				<%= avatar_for @user, :medium %>
 				<%= @user.name %>
@@ -14,11 +14,11 @@
 		<%= render 'follow_form' if current_user %>
     <% if @user.desires.any? %>
       <h3><%= t('.desires') %> (<%= @user.current_desires.count %>)</h3>
-     
+
         <ul class="nav nav-tabs">
         	<li class="active">
         		<a href="#current" data-toggle="tab">
-        			<%= t '.current' %>	
+        			<%= t '.current' %>
         		</a>
         	</li>
         	<li>
@@ -29,9 +29,15 @@
         </ul>
         <div class="tab-content">
         	<div class="tab-pane active" id="current">
-        		<ol class="desires">
-        			<%= render @user.current_desires %>
-        		</ol>
+						<% if @user.current_desires.any? %>
+							<ol class="desires">
+								<%= render @user.current_desires %>
+							</ol>
+						<% else %>
+							<p>
+								<%= t('shared.feed.no_desires_yet') %>
+							</p>
+						<% end %>
         	</div>
         	<div class="tab-pane" id="previous">
         		<ol class="desires">

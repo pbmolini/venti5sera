@@ -10,7 +10,7 @@ it:
       about_text: ""
     help:
       title: "Aiuto"
-      head: "Aiuto" 
+      head: "Aiuto"
       help_text: ""
     home:
       latest_desires: "Desideri recenti"
@@ -49,7 +49,7 @@ it:
   user_sessions:
     new:
       title: "Accedi"
-      head: "Accedi" 
+      head: "Accedi"
       new_user: "Nuovo utente?"
       sign_up_now: "Registrati adesso!"
       forgot_pw: "Password dimenticata?"
@@ -74,13 +74,15 @@ it:
     search:
       search_by_name: "Cerca per nome"
   shared:
+    feed:
+      no_desires_yet: "Non hai ancora espresso desideri per quest'anno"
     feed_item:
       updated: "Aggiornato"
       created: "Creato"
       ago: "fa"
     user_info:
       view_my_desires: "vai ai miei desideri"
-      desire: 
+      desire:
         one: "%{count} desiderio"
         other: "%{count} desideri"
     desire_form:

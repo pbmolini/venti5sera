@@ -6,11 +6,11 @@ en:
       or: "or"
     about:
       title: "About"
-      head: "About" 
+      head: "About"
       about_text: ""
     help:
       title: "Help"
-      head: "Help page" 
+      head: "Help page"
       help_text: ""
     home:
       latest_desires: "Latest Desires"
@@ -49,7 +49,7 @@ en:
   user_sessions:
     new:
       title: "Login"
-      head: "Login"    
+      head: "Login"
       new_user: "New user?"
       sign_up_now: "Sign up now!"
       forgot_pw: "Forgot password?"
@@ -76,13 +76,15 @@ en:
     search:
       search_by_name: "Search users"
   shared:
+    feed:
+      no_desires_yet: "No desires yet. Come on!"
     feed_item:
       updated: "Updated"
       created: "Created"
       ago: "ago"
     user_info:
       view_my_desires: "view my desires"
-      desire: 
+      desire:
         one: "%{count} desire"
         other: "%{count} desires"
     desire_form:
