@@ -1,7 +1,5 @@
 Venti5sera::Application.routes.draw do
 
-  get '.well-known/acme-challenge/:id' => 'static_pages#letsencrypt'
-
   get "relationships/create"
 
   get "relationships/destroy"
