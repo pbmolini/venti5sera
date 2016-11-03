@@ -1,10 +1,14 @@
 <%= render 'shared/error_messages', object: f.object %>
 
 <%= f.label :name, t('.category') %>
-<% if current_user.admin? %>
+<% if current_user.present? # user signed in %>
+  <% if current_user.admin? %>
+   <%= f.select(:category_id, Category.all.map {|c| [c.name, c.id]}) %>
+  <% else # user sees only his category %>
+   <%= f.select(:category_id, [[current_user.category.name, current_user.category.id]]) %>
+  <% end %>
+<% else # only in signup (there is a bf in the controller to avoid edit)%>
   <%= f.select(:category_id, Category.all.map {|c| [c.name, c.id]}) %>
-<% else %>
-  <%= f.text_field :category, readonly: true %>
 <% end %>
 
 <%= f.label :name, t('.name') %>

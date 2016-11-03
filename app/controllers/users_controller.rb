@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_filter :require_admin, only: :destroy
 
   def new
-  	@user = User.new
+  	@user = User.new(category_id: Category.last.id)
     flash[:notice] = t('flash.max_users_reached') if max_users_reached?
   end
 

@@ -17,6 +17,7 @@ en:
   users:
     fields:
       name: "Name"
+      category: "Category"
       name_placeholder: "Write here your first and last name"
       email_placeholder: "Write here a valid email address"
       password: "Password"

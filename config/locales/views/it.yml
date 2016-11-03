@@ -17,6 +17,7 @@ it:
   users:
     fields:
       name: "Nome"
+      category: "Categoria"
       name_placeholder: "Scrivi nome e cognome"
       email_placeholder: "Scrivi un indirizzo email valido"
       password: "Password"
