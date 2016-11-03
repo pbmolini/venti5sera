@@ -1,12 +1,12 @@
 <footer>
 	<small>
-		<a href="https://github.com/pbmolini/venti5sera" target="_blank"><i class="icon-github"></i> | Venti5sera</a>
-		by <a href="http://it.linkedin.com/in/pietromolini" target="_blank">Pietro Molini | <i class="icon-linkedin-sign"></i></a>
+		<a href="https://github.com/pbmolini/venti5sera" target="_blank"><%= icon('github') %> | Venti5sera</a>
+		by <a href="http://it.linkedin.com/in/pietromolini" target="_blank">Pietro Molini | <%= icon('linkedin') %></a>
 	</small>
 	<nav>
 		<ul>
-			<li><%= link_to raw("<i class='icon-info-sign'></i>About"), about_path %></li>
-			<li><a href="http://www.corriere.it" target="_blank"><i class="icon-external-link"></i>News</a></li>
+			<li><%= link_to raw("#{icon('info-circle')} About"), about_path %></li>
+			<li><a href="http://www.corriere.it" target="_blank"><%= icon('external-link') %> News</a></li>
 		</ul>
 	</nav>
 </footer>

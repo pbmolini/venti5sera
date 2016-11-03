@@ -3,13 +3,13 @@
 <p>
 	Dopo esserti registrato ed avere effettuato il login, vedrai la tua home page che contiene:
 	<ul>
-		<li>un breve riassunto di te: nome, immagine, se stai seguendo qualcuno, 
+		<li>un breve riassunto di te: nome, immagine, se stai seguendo qualcuno,
 			se sei seguito da qualcuno, quanti desideri hai scritto
 		</li>
 		<li>un form per scrivere un desiderio</li>
 		<li>una lista degli ultimi desideri scritti da tutti gli altri</li>
 	</ul>
-	Facendo click sul tuo nome in alto a destra apparirà un menu per accedere ai tuoi desideri, 
+	Facendo click sul tuo nome in alto a destra apparirà un menu per accedere ai tuoi desideri,
 	per modificare il tuo profilo (da cui puoi cambiare la tua immagine, seguendo le istruzioni
 	qui sotto) e per uscire.
 </p>
@@ -19,15 +19,15 @@
 <p>
 	Puoi seguire/non seguire una persona andando sulla sua pagina (click sul nome) e
 	premendo il tasto <b>Segui/Non seguire più</b>.
-</p> 
+</p>
 
 <p>
-	Puoi seguire <b>una sola persona</b> e se vuoi cambiare la persona da seguire, 
+	Puoi seguire <b>una sola persona</b> e se vuoi cambiare la persona da seguire,
 	prima devi 'Non seguire più' la persona che stai seguendo.
 </p>
 
 <p>
-	Quando segui una persona ricevi una email ogni volta che la tua persona 
+	Quando segui una persona ricevi una email ogni volta che la tua persona
 	crea/modifica/cancella un desiderio.
 </p>
 
@@ -41,8 +41,8 @@
 <h4>Crea</h4>
 
 <p>
-	Per creare un nuovo desiderio basta usare il form nella tua 
-	<%= link_to "Home", root_url %> (dopo aver effettuato il login) e premere 
+	Per creare un nuovo desiderio basta usare il form nella tua
+	<%= link_to "Home", root_url %> (dopo aver effettuato il login) e premere
 	<b>Crea</b>. Il tuo nuovo desiderio apparirà in cima alla lista dei tuoi
 	desideri.
 </p>
@@ -57,41 +57,41 @@
 
 <p>
 	Per modificare un desiderio vai sulla pagina dei tuoi desideri
-	(<i class='icon-gift'></i> <%= t('layouts.header.my_desires') %>) e fai click
-	su '<i class="icon-edit"></i> cambia' vicino al desiderio che vuoi cambiare. 
-	Puoi modificare solo i desideri relativi al gioco in corso; quelli espressi 
+	(<%= icon('gift') %> <%= t('layouts.header.my_desires') %>) e fai click
+	su '<%= icon('edit') %> cambia' vicino al desiderio che vuoi cambiare.
+	Puoi modificare solo i desideri relativi al gioco in corso; quelli espressi
 	in precedenza non sono più modificabili.
 </p>
 
 <h4>Cancella</h4>
 
 <p>
-	Per cancellare un desiderio vai sulla pagina dei tuoi desideri 
-	(<i class='icon-gift'></i> <%= t('layouts.header.my_desires') %>) e fai click
-	su '<i class="icon-trash"></i> cancella' vicino al desiderio che vuoi cancellare.
-	Puoi cancellare solo i desideri relativi al gioco in corso; quelli espressi 
+	Per cancellare un desiderio vai sulla pagina dei tuoi desideri
+	(<%= icon('gift') %> <%= t('layouts.header.my_desires') %>) e fai click
+	su '<%= icon('trash') %> cancella' vicino al desiderio che vuoi cancellare.
+	Puoi cancellare solo i desideri relativi al gioco in corso; quelli espressi
 	in precedenza non sono più eliminabili.
 </p>
 
 <h2>Cambia l'immagine del tuo profilo</h2>
 
 <p>
-	In questo sito l'immagine del tuo profilo si chiama 
-	'<a href="http://it.wikipedia.org/wiki/Avatar_(realtà_virtuale)" target="_blank">avatar</a>'. 
-	Il tuo avatar di default è preso da 
+	In questo sito l'immagine del tuo profilo si chiama
+	'<a href="http://it.wikipedia.org/wiki/Avatar_(realtà_virtuale)" target="_blank">avatar</a>'.
+	Il tuo avatar di default è preso da
 	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a>, quindi se
-	ti registri su <%= link_to "venti5sera", root_url %> con un indirizzo email registrato su 
-	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a> vedrai la tua 
-	immagine di <a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a>.	
+	ti registri su <%= link_to "venti5sera", root_url %> con un indirizzo email registrato su
+	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a> vedrai la tua
+	immagine di <a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a>.
 </p>
 
 <p>
-	Naturalmente puoi usare il tuo avatar anche caricandolo su <%= link_to "venti5sera", root_url %>. 
-	Per farlo devi andare in '<i class='icon-user'></i> <%= t('layouts.header.profile') %>' selezionare il tuo
+	Naturalmente puoi usare il tuo avatar anche caricandolo su <%= link_to "venti5sera", root_url %>.
+	Per farlo devi andare in '<%= icon('user') %> <%= t('layouts.header.profile') %>' selezionare il tuo
 	avatar dal tuo computer e salvare le modifiche.
 </p>
 
 <p>
-	Per cancellare il tuo avatar vai su '<i class='icon-user'></i> <%= t('layouts.header.profile') %>' e 
-	fai click su '<i class="icon-trash"></i> cancella' vicino al tuo avatar.
+	Per cancellare il tuo avatar vai su '<%= icon('user') %> <%= t('layouts.header.profile') %>' e
+	fai click su '<%= icon('trash') %> cancella' vicino al tuo avatar.
 </p>

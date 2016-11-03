@@ -31,7 +31,7 @@ it:
       title: "Modifica utente"
       head: "Aggiorna il tuo profilo"
       edit_gravatar: "modifica su gravatar.com"
-      delete_avatar_html: <i class="icon-trash"></i> cancella
+      delete_avatar_html: <i class="fa fa-trash"></i> cancella
     index:
       title: "Tutti gli utenti"
       head: "Tutti gli utenti"
@@ -44,8 +44,8 @@ it:
       current: "In corso"
       previous: "Precedenti"
     user:
-      delete_html: <i class="icon-trash"></i> Elimina
-      edit_html: <i class="icon-trash"></i> Modifica
+      delete_html: <i class="fa fa-trash"></i> Elimina
+      edit_html: <i class="fa fa-edit"></i> Modifica
   user_sessions:
     new:
       title: "Accedi"
@@ -95,9 +95,9 @@ it:
       you_follow_someone_html: Stai seguendo <strong id="followers" class="stat">qualcuno</strong>
       you_follow_no_one_html: Non stai seguendo <strong id="followers" class="stat">nessuno</strong>
     delete_desire_link:
-      delete_html: <i class="icon-trash"></i> cancella
+      delete_html: <i class="fa fa-trash"></i> cancella
     edit_desire_link:
-      edit_html: <i class="icon-edit"></i> cambia
+      edit_html: <i class="fa fa-edit"></i> cambia
   desires:
     desire:
       updated: "Aggiornato"

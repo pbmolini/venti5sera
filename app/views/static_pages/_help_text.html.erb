@@ -3,29 +3,29 @@
 <p>
 	After having registered and logged in, you will see a your home page which contains:
 	<ul>
-		<li>a small resume of yourself: name, picture, if you are following, 
+		<li>a small resume of yourself: name, picture, if you are following,
 			if are followed, how many desires you posted
 		</li>
 		<li>a form for creating a new desire</li>
 		<li>a list of the latest desires posted by all the users</li>
 	</ul>
-	At the very left of the top bar you have a menu for accessing your profile, 
+	At the very left of the top bar you have a menu for accessing your profile,
 	your desires and for signing out.
 </p>
 
 <h2>Follow/Unfollow</h2>
 
 <p>
-	You can follow/unfollow one person by visiting his page (click on his name) and 
+	You can follow/unfollow one person by visiting his page (click on his name) and
 	pressing the Follow/Unfollow button.
-</p> 
+</p>
 
 <p>
-	You can follow <b>one person at a time</b> and if you want to follow someone else, 
+	You can follow <b>one person at a time</b> and if you want to follow someone else,
 	first you have to Unfollow the person you are currently following.
 </p>
 
-<p>When you will start following someone you will receive an email every time your followed 
+<p>When you will start following someone you will receive an email every time your followed
 	person will post/delete/edit a desire.
 </p>
 
@@ -38,13 +38,13 @@
 <h4>Create</h4>
 
 <p>
-	To create a new desire, just fill the form in the <%= link_to "Home", root_url %> 
+	To create a new desire, just fill the form in the <%= link_to "Home", root_url %>
 	(when you are logged in) and press the <b>Post</b> button.
 	Your brand new desire will appear on the top of the list of your desires.
 </p>
 
 <p>
-	The text-box allows you to write max. 1024 characters and to insert links which 
+	The text-box allows you to write max. 1024 characters and to insert links which
 	will be automatically recognized. You cannot insert images or other documents.
 	If you need to post an image, just use a link to it!
 </p>
@@ -53,37 +53,37 @@
 
 <p>
 	To edit an existing desire, just go to your desires' page
-	(<i class='icon-gift'></i> <%= t('layouts.header.my_desires') %>) and click on the
-	'<i class="icon-edit"></i> edit' link of the desire you want to edit.
+	(<%= icon('gift') %> <%= t('layouts.header.my_desires') %>) and click on the
+	'<%= icon('edit') %> edit' link of the desire you want to edit.
 </p>
 
 <h4>Remove</h4>
 
 <p>
 	To remove a desire, just go to your desires' page
-	(<i class='icon-gift'></i> <%= t('layouts.header.my_desires') %>) and click on the
-	'<i class="icon-trash"></i> remove' link of the desire you want to remove.
+	(<%= icon('gift') %> <%= t('layouts.header.my_desires') %>) and click on the
+	'<%= icon('trash') %> remove' link of the desire you want to remove.
 </p>
 
 <h2>Edit your profile picture</h2>
 
 <p>
-	In this websites your profile picture is called 
-	'<a href="http://en.wikipedia.org/wiki/Avatar_(computing)" target="_blank">avatar</a>'. 
-	Your default avatar is taken from 
-	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a>, so if you 
-	register to <%= link_to "venti5sera", root_url %> with and email address registered on 
-	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a> you will see your 
-	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a> picture.	
+	In this websites your profile picture is called
+	'<a href="http://en.wikipedia.org/wiki/Avatar_(computing)" target="_blank">avatar</a>'.
+	Your default avatar is taken from
+	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a>, so if you
+	register to <%= link_to "venti5sera", root_url %> with and email address registered on
+	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a> you will see your
+	<a href="https://<%= I18n.locale %>.gravatar.com/" target="_blank">gravatar</a> picture.
 </p>
 
 <p>
-	Of course you can use your own avatar by uploading it to <%= link_to "venti5sera", root_url %>. 
-	To do it you have to go in '<i class='icon-user'></i> <%= t('.profile') %>' page, select 
+	Of course you can use your own avatar by uploading it to <%= link_to "venti5sera", root_url %>.
+	To do it you have to go in '<%= icon('user') %> <%= t('.profile') %>' page, select
 	your avatar from your computer and save the changes.
 </p>
 
 <p>
-	To remove your avatar you just visit the 'Profile' page and click on the 
-	'<i class="icon-trash"></i> remove' link. 
+	To remove your avatar you just visit the 'Profile' page and click on the
+	'<%= icon('trash') %> remove' link.
 </p>

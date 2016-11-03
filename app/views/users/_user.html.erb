@@ -2,6 +2,7 @@
 	<%#= gravatar_for user, size: 52 %>
 	<%= avatar_for user, :thumb %>
 	<%= link_to user.name, user %>
+	(<%= link_to icon(user.category.icon), categories_path(anchor: user.category.name) %>)
 	<% if current_user && current_user.admin? && !current_user?(user) %>
     | <%= link_to (raw t('.delete_html')), user, method: :delete,
                                   data: { confirm: t(:are_you_sure) } %>
