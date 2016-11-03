@@ -23,6 +23,20 @@ Deploying to heroku:
 $ git push heroku master
 ```
 
+If you have new migrations remember to do
+
+```sh
+$ heroku run rake db:migrate
+```
+
+#### Troubleshooting
+
+Sometimes latest commmits don't take effect on Heroku, so you can try
+
+```sh
+$ heroku restart
+```
+
 ## Beer-ware license
 
 Pietro Molini wrote this code. As long as you retain this notice you
