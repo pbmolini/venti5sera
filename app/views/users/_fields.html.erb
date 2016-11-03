@@ -1,5 +1,12 @@
 <%= render 'shared/error_messages', object: f.object %>
 
+<%= f.label :name, t('.category') %>
+<% if current_user.admin? %>
+  <%= f.select(:category_id, Category.all.map {|c| [c.name, c.id]}) %>
+<% else %>
+  <%= f.text_field :category, readonly: true %>
+<% end %>
+
 <%= f.label :name, t('.name') %>
 <%= f.text_field :name, placeholder: t('.name_placeholder') %>
 
@@ -9,11 +16,11 @@
 <% end %>
 
 <%= f.label :password %>
-<%= f.password_field :password, 
+<%= f.password_field :password,
 											placeholder: current_user ? t('.new_password_placeholder') : t('.password_placeholder')%>
 
 <%= f.label :password_confirmation, t('.confirmation') %>
-<%= f.password_field :password_confirmation, 
+<%= f.password_field :password_confirmation,
 											placeholder: current_user ? t('.new_confirmation_placeholder') : t('.confirmation_placeholder')%>
 
 <% if current_user %>

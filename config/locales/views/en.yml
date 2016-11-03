@@ -69,6 +69,7 @@ en:
       home: "Home"
       help: "Help"
       users: "Users"
+      categories: "Categories"
       my_desires: "My Desires"
       profile: "Profile"
       sign_in: "Sign in"
@@ -77,7 +78,7 @@ en:
       search_by_name: "Search users"
   shared:
     feed:
-      no_desires_yet: "No desires yet. Come on!"
+      no_desires_yet: "Still no desires this year."
     feed_item:
       updated: "Updated"
       created: "Created"

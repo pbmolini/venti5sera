@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation, :avatar
+  attr_accessible :name, :email, :password, :password_confirmation, :avatar, :category_id
 	acts_as_authentic do |c|
     c.logged_in_timeout = 10.minutes # default is 10.minutes
   end
-  has_attached_file :avatar, 
+  has_attached_file :avatar,
                     storage: :dropbox,
                     dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
                     styles: { medium: "150x150>", thumb: "52x52>", small: "40x40>" },
@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
                                    class_name:  "Relationship",
                                    dependent:   :destroy
   has_one :follower, through: :reverse_relationship, source: :follower
+
+  belongs_to :category
 
   validate :max_users, on: :create
 

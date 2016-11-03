@@ -16,6 +16,7 @@
           <ul class="nav pull-right">
             <li><%= link_to raw("<i class='icon-home'></i> #{t('.home')}"), root_path %></li>
             <li><%= link_to raw("<i class='icon-list'></i> #{t('.users')}"), users_path %></li>
+						<li><%= link_to raw("<i class='icon-certificate'></i> #{t('.categories')}"), categories_path %></li>
             <li><%= link_to raw("<i class='icon-question-sign'></i> #{t('.help')}"), help_path %></li>
             <% if current_user %>
             <li id="fat-menu" class="dropdown">

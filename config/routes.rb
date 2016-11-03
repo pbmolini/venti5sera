@@ -15,6 +15,7 @@ Venti5sera::Application.routes.draw do
   resources :desires, only: [ :create, :destroy, :edit, :update ]
   resources :relationships, only: [ :create, :destroy ]
   resources :password_resets, :only => [ :new, :create, :edit, :update ]
+  resources :categories, only: [:index]
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'user_sessions#new'

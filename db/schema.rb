@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131113083053) do
+ActiveRecord::Schema.define(:version => 20161102152323) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "desires", :force => true do |t|
     t.text     "content"
@@ -48,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20131113083053) do
     t.datetime "avatar_updated_at"
     t.datetime "last_request_at"
     t.string   "perishable_token",    :default => "",    :null => false
+    t.integer  "category_id"
   end
 
   add_index "users", ["perishable_token"], :name => "index_users_on_perishable_token"

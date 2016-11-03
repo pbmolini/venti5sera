@@ -67,6 +67,7 @@ it:
       home: "Home"
       help: "Aiuto"
       users: "Tutti"
+      categories: "Categorie"
       my_desires: "I miei Desideri"
       profile: "Il mio Profilo"
       sign_in: "Entra"
@@ -75,7 +76,7 @@ it:
       search_by_name: "Cerca per nome"
   shared:
     feed:
-      no_desires_yet: "Non hai ancora espresso desideri per quest'anno"
+      no_desires_yet: "Non ci sono ancora desideri per quest'anno."
     feed_item:
       updated: "Aggiornato"
       created: "Creato"
