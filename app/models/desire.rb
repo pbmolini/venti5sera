@@ -1,10 +1,10 @@
 class Desire < ActiveRecord::Base
   attr_accessible :content
-  belongs_to :user
-  
+  belongs_to :user, touch: true
+
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: 1024}
-  
+
   default_scope order: 'desires.updated_at DESC'
 
   def modified_after_last_xmas?
