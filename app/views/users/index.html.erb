@@ -14,10 +14,8 @@
 
 <%=	will_paginate %>
 
-<% cache @users do %>
-	<ul class="users">
-		<%= render @users %>
-	</ul>
-<% end %>
+<ul class="users">
+  <%= render @users %>
+</ul>
 
 <%=	will_paginate %>
