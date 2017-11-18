@@ -65,9 +65,9 @@ class UsersController < ApplicationController
 
   def remove_avatar
     @user = User.find(params[:id])
-    @user.avatar = nil
+    # @user.avatar = nil
     if @user.save
-      flash[:success] = t('flash.avatar_removed')
+      # flash[:success] = t('flash.avatar_removed')
       redirect_to @user
     else
       render 'edit'

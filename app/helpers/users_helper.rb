@@ -8,11 +8,11 @@ module UsersHelper
 	end
 
 	def avatar_for(user, size)
-		if user.avatar?
-			# image_tag user.avatar.url size 
-			# if you have an error here you probably have to install ImageMagick locally
-			image_tag((image_path user.avatar.url size), alt: user.name, class: "gravatar img-polaroid")
-		else
+		# if user.avatar?
+		# 	# image_tag user.avatar.url size
+		# 	# if you have an error here you probably have to install ImageMagick locally
+		# 	image_tag((image_path user.avatar.url size), alt: user.name, class: "gravatar img-polaroid")
+		# else
 			case size
 			when :small
 				gravatar_for user, size: 24
@@ -21,7 +21,7 @@ module UsersHelper
 			when :medium
 				gravatar_for user, size: 150
 			end
-		end
+		# end
 	end
 
 end
